@@ -1,0 +1,44 @@
+---
+title: "Projeto de dissertação"
+author: "Marcus Antonio Cardoso Ramalho"
+format: pdf
+editor: visual
+bibliography: references.bib
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| include: false
+
+library(tidyverse)
+library(rbcb)
+
+source("scripts/graficos-macroeconomicos.R")
+
+```
+
+
+## Introdução
+
+Durante décadas, a maior parte dos Brasileiro que conseguia poupar algum dinheiro acabava usando mecanismos de renda fixa que rendiam muito pouco no médio prazo como a poupança, ou simplesmente usavam o depósito bancário para acumular dinheiro sem usufruir dos retornos de renda fixa ou variável. Essa cultura perdura até hoje [@spc2018], porém, tem diminuído diante do aumento de opções de produtos e ativos de investimento e da popularização de plataformas digitais que facilitam o acesso de pessoas físicas a renda variável.
+
+Um dos tipos de ativos que se tornou muito popular nos últimos 5 anos são os fundos de investimento imobiliário (FII) [@b32023] que por suas características fiscais e nível de risco relativamente baixo acaba se encaixando bem às preferências do pequeno investidor brasileiro, que por muito tempo teve apenas na poupança uma opção de baixo risco e única forma de investir suas reservas financeiras em longo prazo.
+
+Outro fator que contribuiu para o aumento no número de investidores do tipo pesoa física no mercado dos FII foi a oscilação negativa na taxa SELIC (Sistema Especial de Liquidação e de Custodia) como pode ser visto na @fig-selic
+
+
+```{r}
+#| fig-cap: "Elaboração própria - fonte: Banco Central do Brasil "
+#| label: fig-selic
+#| echo: false
+
+Grafico_selic_anual
+
+```
+
+
+\newpage
+
+Bibliografia
+

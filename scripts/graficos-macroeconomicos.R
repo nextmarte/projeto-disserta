@@ -27,7 +27,7 @@ Grafico_selic_anual <- ggplot(anual_selic) +
   geom_line(colour = "black") +
   labs(
     y = "SELIC % a.a",
-    title = "Serie historica da taxa SELIC 2010-2022") +
+    title = "Serie histórica da taxa SELIC 2010-2022") +
   expand_limits(y = c(0, 0.15)) +
   scale_y_continuous(labels = scales::percent)+
   theme_minimal() + 
