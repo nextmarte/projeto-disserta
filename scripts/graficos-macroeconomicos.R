@@ -24,7 +24,7 @@ anual_selic <- selic %>%
 
 Grafico_selic_anual <- ggplot(anual_selic) +
   aes(x = Data, y = SELIC) +
-  geom_line(colour = "black") +
+  geom_line(colour = "gray") +
   labs(
     y = "SELIC % a.a",
     title = "Serie histórica da taxa SELIC 2010-2022") +
@@ -32,3 +32,18 @@ Grafico_selic_anual <- ggplot(anual_selic) +
   scale_y_continuous(labels = scales::percent)+
   theme_minimal() + 
   ggeasy::easy_center_title()
+
+
+# investidores --------------------------------------------------------------------
+
+
+investors <- rio::import("dados/investidores_custodia.xlsx")
+
+
+investidores_custodia <-  ggplot(investors, aes(x = Ano, y = Investidores)) +
+  geom_bar(stat = "identity", fill = "gray") +
+  labs(title = "Número de Investidores por Ano com posição em custódia",
+       x = "Ano",
+       y = "Investidores")+
+    ggeasy::easy_adjust_legend(to="center")+
+    ggeasy::easy_center_title()

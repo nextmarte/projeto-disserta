@@ -1,0 +1,32 @@
+{
+    "id": "F27E198C",
+    "path": "~/projeto-disserta/Projeto_dissertacao.qmd",
+    "project_path": "Projeto_dissertacao.qmd",
+    "type": "quarto_markdown",
+    "hash": "813699501",
+    "contents": "",
+    "dirty": false,
+    "created": 1686618582711.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "rmdVisualMode": "true",
+        "rmdVisualWrapConfigured": "true",
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "45,0",
+        "scrollLine": "0",
+        "docOutlineVisible": "1",
+        "rmdVisualCollapsedChunks": "",
+        "rmdVisualModeLocation": "3332:1119.0909423828125"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1686624532,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1686624532782,
+    "read_only": false,
+    "read_only_alternatives": []
+}

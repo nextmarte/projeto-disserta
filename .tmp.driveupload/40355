@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.5.27)  2 JUN 2023 13:51
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.5.27)  12 JUN 2023 23:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1110,45 +1110,48 @@ File: Projeto_dissertacao_files/figure-pdf/fig-selic-1.pdf Graphic file (type pd
 
 
 ]
+File: Projeto_dissertacao_files/figure-pdf/fig-investors-1.pdf Graphic file (type pdf)
+<use Projeto_dissertacao_files/figure-pdf/fig-investors-1.pdf>
+[2]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 225.
+(Font)              scaled to size 7.665pt on input line 260.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 225.
+(Font)              scaled to size 5.475pt on input line 260.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95099pt on input line 225.
+(Font)              scaled to size 10.95099pt on input line 260.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.66568pt on input line 225.
+(Font)              scaled to size 7.66568pt on input line 260.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.4755pt on input line 225.
+(Font)              scaled to size 5.4755pt on input line 260.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 225.
+(Font)              scaled to size 10.94882pt on input line 260.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 225.
+(Font)              scaled to size 7.66417pt on input line 260.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 225.
+(Font)              scaled to size 5.47441pt on input line 260.
 
-Underfull \hbox (badness 2142) in paragraph at lines 223--226
+Underfull \hbox (badness 2142) in paragraph at lines 258--261
 []\TU/lmr/m/n/10.95 B3. 2023. “Boletim Mensal FII.” [][]$[][][][][] [] [] [] [][][] [] [][] [] [][][] [] [][] [] [][][][] [] [][][][][] [] [][] [] [][] [] [][] [] [][] []
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 227--231
+Underfull \hbox (badness 1708) in paragraph at lines 272--276
 []\TU/lmr/m/n/10.95 SPC. 2018. “Cenário Da Poupança e Dos Investimentos Dos Brasileiros.” [][]$[][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--231
+Underfull \hbox (badness 10000) in paragraph at lines 272--276
 [] [] [][][][][][][][] [] [][][] [] [][][] [] [][] [] [][][][][][] [] [][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][] [] [][][][][][][] [] [][][][][][][][][] [] [][][][][][][][] []
  []
 
-[2] (./Projeto_dissertacao.aux) ) 
+[3] (./Projeto_dissertacao.aux) ) 
 Here is how much of TeX's memory you used:
- 36867 strings out of 478680
- 776634 string characters out of 5846670
- 1854410 words of memory out of 5000000
- 56437 multiletter control sequences out of 15000+600000
- 518694 words of font info for 79 fonts, out of 8000000 for 9000
+ 36885 strings out of 478680
+ 777326 string characters out of 5846670
+ 1861410 words of memory out of 5000000
+ 56449 multiletter control sequences out of 15000+600000
+ 518702 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,7n,121p,10914b,447s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Projeto_dissertacao.pdf (2 pages).
+Output written on Projeto_dissertacao.pdf (3 pages).

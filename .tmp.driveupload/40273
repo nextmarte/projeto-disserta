@@ -19,4 +19,6 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Elaboração própria - fonte: Banco Central do Brasil\relax }}{2}{figure.caption.3}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig-selic}{{1}{2}{Elaboração própria - fonte: Banco Central do Brasil\relax }{figure.caption.3}{}}
-\gdef \@abspage@last{2}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Elaboração própria - fonte: BOLETIM MENSAL FUNDOS IMOBILIÁRIOS(FIIs) B3\relax }}{3}{figure.caption.4}\protected@file@percent }
+\newlabel{fig-investors}{{2}{3}{Elaboração própria - fonte: BOLETIM MENSAL FUNDOS IMOBILIÁRIOS(FIIs) B3\relax }{figure.caption.4}{}}
+\gdef \@abspage@last{3}
