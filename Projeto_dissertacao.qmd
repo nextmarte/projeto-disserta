@@ -61,6 +61,16 @@ Isso se confirma ao verificarmos que mesmo com o aumento da taxa SELIC durante a
 investidores_custodia
 ```
 
+A diversidade dos tipos de fundos de investimento imobiliário também pode ajudar a entender sua popularização. Os fundos são um tipo de produto do mercado financeiro que permite o investimento no mercado imobiliário, ou seja, o administrador do fundo, que possui um ou mais imóveis faz uma oferta inicial de venda de cotas no mercado aberto ou fechado.... continuar
+
+Considerando as diversas variáveis que podem estar envolvidas nas dinâmicas de retorno sobre investimento dos FII's, este trabalho realizará uma análise que buscará entender o grau de influência de indicadores macroeconomicos e sanitários sobre o desempenho de diferentes tipos de fundos no período de 2017 até 2022
+
+## Objetivos gerais
+
+Verificar as correlações entre o desempenho dos fundos de investimento imobiliário e as diversas variáveis macroeconomicas antes e durante a pandemia de corona vírus
+
+## Objetivo específico
+
 ## Revisão da Literatura
 
 ## Metodologia
