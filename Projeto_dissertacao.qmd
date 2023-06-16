@@ -1,8 +1,10 @@
 ---
-title: "Projeto de dissertação"
+title: "UNIVERSIDADE FEDERAL FLUMINENSE FACULDADE DE ADMINISTRAÇÃO E CIÊNCIAS CONTÁBEIS"
+subject: "teste"
+subtitle: "Programa de Pós-Graduação em Administração Mestrado Acadêmico em Administração"
 author: "Marcus Antonio Cardoso Ramalho"
 format:
-  pdf:
+  docx:
     latex_engine: xelatex
     sansfont: Times New Roman
     fontsize: 12pt
@@ -95,7 +97,9 @@ Tendo em vista o contexto que se apresenta este trabalho, surge a oportunidade d
 
 ## Objetivos
 
-Considerando as diversas variáveis que podem estar envolvidas nas dinâmicas de retorno sobre investimento dos FII's, este trabalho realizará uma pesquisa exploratória quantitativa que buscará entender o grau de influência de indicadores como a taxa SELIC, retorno do benchmark do mercado de fundos, pagamento de dividendos e retorno dos 10 fundos com maior volume de negócios em cada categoria no período de 2017 até 2022, período que envolve o pós crise política e a crise sanitária de COVID-19. Apesar de ser uma pesquisa quantitativa, também se pretende analisar os resultados de forma qualitativa, de forma a distcutir os achados com outras referências sobre o assunto. Além disso, também se pretende verificar as correlações entre a performance dos fundos de investimento imobiliário e as diversas variáveis macroeconomicas antes e durante a pandemia de corona vírus, considerando que apesar da taxa SELIC historicamente ser a que mais está relacionada aos FII's, outras variáveis como, o PIB, a taxa de desemprego e a inflação podem ter tido impacto nos resultados das diversas categorias de fundos, dado o ambiente atípico causado pela Pandemia.
+Considerando as diversas variáveis que podem estar envolvidas nas dinâmicas de retorno sobre investimento dos FII's, este trabalho realizará uma pesquisa exploratória quantitativa que buscará entender o grau de influência de indicadores como a taxa SELIC, retorno do benchmark do mercado de fundos, pagamento de dividendos e retorno dos 10 fundos com maior volume de negócios em cada categoria no período de 2017 até 2022, período que envolve o pós crise política e a crise sanitária de COVID-19.
+
+Apesar de ser uma pesquisa quantitativa, também se pretende analisar os resultados de forma qualitativa, de forma a distcutir os achados com outras referências sobre o assunto. Além disso, também se pretende verificar as correlações entre a performance dos fundos de investimento imobiliário e as diversas variáveis macroeconomicas antes e durante a pandemia de corona vírus, considerando que apesar da taxa SELIC historicamente ser a que mais está relacionada aos FII's, outras variáveis como, o PIB, a taxa de desemprego e a inflação podem ter tido impacto nos resultados das diversas categorias de fundos, dado o ambiente atípico causado pela Pandemia.
 
 ## Objeto
 
