@@ -2,6 +2,7 @@ library(rbcb)
 library(tidyverse)
 library(timetk)
 library(PerformanceAnalytics)
+library(gtrendsR)
 
 
 
@@ -47,3 +48,24 @@ investidores_custodia <-  ggplot(investors, aes(x = Ano, y = Investidores)) +
        y = "Investidores")+
     ggeasy::easy_adjust_legend(to="center")+
     ggeasy::easy_center_title()
+
+
+# Trends busca por FII no youtube -----------------------------------------
+
+FII_trend <- gtrends("FII",geo = "BR", time = "2010-01-01 2022-12-31")$interest_over_time
+
+FII_trend_plot <- FII_trend %>% 
+  select(date,hits) %>% 
+  mutate(year = lubridate::year(date)) %>%
+  group_by(year) %>%
+  summarise(total_hits = sum(hits))
+
+
+FII_trend_ggplot <-  ggplot(FII_trend_plot, aes(x = year, y = total_hits)) +
+  geom_bar(stat = "identity", fill = "gray") +
+  labs(title = "Pontos de Popularidade dos FIIs no youtube segundo o google trends",
+       x = "Data",
+       y = "Popularidade")+
+  ggeasy::easy_adjust_legend(to="center")+
+  ggeasy::easy_center_title()
+

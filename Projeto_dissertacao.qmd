@@ -2,13 +2,17 @@
 title: "Projeto de dissertação"
 author: "Marcus Antonio Cardoso Ramalho"
 format:
-  docx:
+  pdf:
     latex_engine: xelatex
     sansfont: Times New Roman
     fontsize: 12pt
     lineheight: 1.5
+    linestretch: 1.5
     geometry: "left=2.54cm, top=2.54cm, right=2.54cm, bottom=2.54cm"
     keep-tex: false
+    number-sections: true
+    toccolor: black
+    toc-title: "Sumário"
 crossref:
   fig-title: Gráfico    
   fig-prefix: gráfico
@@ -19,11 +23,21 @@ bibliography: references.bib
 csl: apa.csl
 ---
 
+\newpage
+
+<!-- Muda a cor e o título do sumário na segunda página -->
+
+```{=tex}
+\hypersetup{linkcolor=black} 
+\renewcommand{\contentsname}{Sumário}
+\tableofcontents
+\newpage
+```
 ```{r}
 #| echo: false
 #| message: false
 #| include: false
-
+#| cache: true
 library(tidyverse)
 library(rbcb)
 
@@ -39,39 +53,55 @@ Um dos tipos de ativos que se tornou muito popular nos últimos 5 anos são os f
 
 Outro fator que contribuiu para o aumento no número de investidores do tipo pesoa física no mercado dos FII foi a oscilação negativa na taxa SELIC (Sistema Especial de Liquidação e de Custodia)[@jacomassi2022] como pode ser visto no @fig-selic.
 
-A taxa básica de juros da economia é definida periodicamente pelo COPOM (Comitê de Política Monetária), ela é uma das principais ferramentas da política monetária e serve como referência para as demais taxas do mercado [@jacomassi2022]. No Brasil o Banco Central usa esse mecanismo principalmente para controle da inflação , porém, historicamente o país sempre teve taxas altas, o que trouxe problemas no controle da dívida publica e na estabilidade do mercado[@jabrh.d.omar2008].
-
-Ainda sobre o crescimento do número de investidores em 2020, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessáriamente está ligado somente a variação da SELIC em 2020 mas também a outros fatores como a popularização de plataformas digitais de investimento.
-
 ```{r}
 #| fig-cap: "Elaboração própria - fonte: Banco Central do Brasil "
 #| label: fig-selic
 #| echo: false
+#| cache: true
 
 Grafico_selic_anual
 
 ```
 
-Isso se confirma ao verificarmos que mesmo com o aumento da taxa SELIC durante a pandemia o número pessoas investindo nos fundos de investimento imobiliário continuou aumentando significativamente como mostra o @fig-investors obtido do relatório mensal sobre os FII's da B3.
+A taxa básica de juros da economia é definida periodicamente pelo COPOM (Comitê de Política Monetária), ela é uma das principais ferramentas da política monetária e serve como referência para as demais taxas do mercado [@jacomassi2022]. No Brasil o Banco Central usa esse mecanismo principalmente para controle da inflação , porém, historicamente o país sempre teve taxas altas, o que trouxe problemas no controle da dívida publica e na estabilidade do mercado[@jabrh.d.omar2008].
+
+Ainda sobre o crescimento do número de investidores em 2020, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessáriamente está ligado somente a variação da SELIC em 2020 mas também a outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros, algo recente e que segundo pesquisa realizada pela B3 vai de encontro ao fato de que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
+
+```{r}
+#| fig-cap: "fonte: Google trends Youtube "
+#| label: fig-popularity
+#| echo: false
+#| cache: true
+
+FII_trend_ggplot
+```
+
+Isso se confirma ao verificarmos que mesmo com o aumento da taxa SELIC durante a pandemia o número pessoas investindo nos fundos de investimento imobiliário continuou aumentando significativamente como mostra o @fig-investors obtido do relatório mensal sobre os FII's da B3[@b32023a].
 
 ```{r}
 #| fig-cap: "fonte: Boletim mensal fundos imobiliários (FIIs) B3 "
 #| label: fig-investors
 #| echo: false
+#| cache: true
+
 investidores_custodia
 ```
 
-A diversidade dos tipos de fundos de investimento imobiliário também pode ajudar a entender sua popularização. Os fundos são um tipo de produto do mercado financeiro que permite o investimento no mercado imobiliário, ou seja, o administrador do fundo, que possui um ou mais imóveis faz uma oferta inicial de venda de cotas no mercado aberto ou fechado.... aqui vou continuar ate chegar na pergunta de pesquisa
+A diversidade dos tipos de fundos de investimento imobiliário também pode ajudar a entender sua popularização. Os FII\`s são um tipo de produto do mercado financeiro que permite o investimento no mercado imobiliário, ou seja, o administrador do fundo, que possui um ou mais imóveis pode ofertar cotas no mercado, onde investidores podem comprar e revender suas cotas, auferindo retornos referentes a variação dos preços ou os dividendos que podem ser distribuidos pelo fundo periodicamente.
 
-Considerando as diversas variáveis que podem estar envolvidas nas dinâmicas de retorno sobre investimento dos FII's, este trabalho realizará uma análise que buscará entender o grau de influência de indicadores macroeconomicos e sanitários sobre o desempenho de diferentes tipos de fundos no período de 2017 até 2022
+## Problema
 
-## Objetivos gerais
+Tendo em vista o contexto que se apresenta este trabalho, surge a oportunidade de colaborar com o desenvolvimento das pesquisas na área de fundos de investimento imobiliário através da investigação dos fatores que hipoteticamente podem colaborar com o crescimento no número de investidores e no volume de negócio num contexto de alta volatilidade da taxa SELIC, do mercado financeiro em geral e da recessão causada pela pandemia de COVID-19 que causou aumento do desemprego e fechamento de imóveis comerciais, que são os principais ativos dos fundos em questão. Assim, a pergunta que se põe é: Quais foram os determinantes do crescimento no número de investidores em fundos imobiliários no período de crise sanitária?
 
-Verificar as correlações entre o desempenho dos fundos de investimento imobiliário e as diversas variáveis macroeconomicas antes e durante a pandemia de corona vírus
+## Objetivos
 
-## Objetivo específico
+Considerando as diversas variáveis que podem estar envolvidas nas dinâmicas de retorno sobre investimento dos FII's, este trabalho realizará uma pesquisa exploratória quantitativa que buscará entender o grau de influência de indicadores como a taxa SELIC, retorno do benchmark do mercado de fundos, pagamento de dividendos e retorno dos 10 fundos com maior volume de negócios em cada categoria no período de 2017 até 2022, período que envolve o pós crise política e a crise sanitária de COVID-19. Apesar de ser uma pesquisa quantitativa, também se pretende analisar os resultados de forma qualitativa, de forma a distcutir os achados com outras referências sobre o assunto. Além disso, também se pretende verificar as correlações entre a performance dos fundos de investimento imobiliário e as diversas variáveis macroeconomicas antes e durante a pandemia de corona vírus, considerando que apesar da taxa SELIC historicamente ser a que mais está relacionada aos FII's, outras variáveis como, o PIB, a taxa de desemprego e a inflação podem ter tido impacto nos resultados das diversas categorias de fundos, dado o ambiente atípico causado pela Pandemia.
 
-## Revisão da Literatura
+## Objeto
+
+## Justificativa
+
+## Referencial Teórico
 
 ## Metodologia
 
@@ -81,4 +111,4 @@ Verificar as correlações entre o desempenho dos fundos de investimento imobili
 
 \newpage
 
-Bibliografia
+## Bibliografia
