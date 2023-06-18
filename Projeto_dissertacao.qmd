@@ -4,7 +4,7 @@ subject: "teste"
 subtitle: "Programa de Pós-Graduação em Administração Mestrado Acadêmico em Administração"
 author: "Marcus Antonio Cardoso Ramalho"
 format:
-  docx:
+  pdf:
     latex_engine: xelatex
     sansfont: Times New Roman
     fontsize: 12pt
@@ -13,8 +13,6 @@ format:
     geometry: "left=2.54cm, top=2.54cm, right=2.54cm, bottom=2.54cm"
     keep-tex: false
     number-sections: true
-    toccolor: black
-    toc-title: "Sumário"
 crossref:
   fig-title: Gráfico    
   fig-prefix: gráfico
@@ -67,7 +65,9 @@ Grafico_selic_anual
 
 A taxa básica de juros da economia é definida periodicamente pelo COPOM (Comitê de Política Monetária), ela é uma das principais ferramentas da política monetária e serve como referência para as demais taxas do mercado [@jacomassi2022]. No Brasil o Banco Central usa esse mecanismo principalmente para controle da inflação , porém, historicamente o país sempre teve taxas altas, o que trouxe problemas no controle da dívida publica e na estabilidade do mercado[@jabrh.d.omar2008].
 
-Ainda sobre o crescimento do número de investidores em 2020, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessáriamente está ligado somente a variação da SELIC em 2020 mas também a outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros, algo recente e que segundo pesquisa realizada pela B3 vai de encontro ao fato de que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
+Ainda sobre o crescimento do número de investidores em 2020, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessáriamente está ligado somente a variação da SELIC em 2020 mas também a outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros, algo recente e que segundo pesquisa realizada pela B3[^1] vai de encontro ao fato de que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
+
+[^1]: B3 é a sigla para Brasil, Bolsa, Balcão e refere-se à principal bolsa de valores do Brasil
 
 ```{r}
 #| fig-cap: "fonte: Google trends Youtube "
@@ -93,25 +93,52 @@ A diversidade dos tipos de fundos de investimento imobiliário também pode ajud
 
 ## Problema
 
-Tendo em vista o contexto que se apresenta este trabalho, surge a oportunidade de colaborar com o desenvolvimento das pesquisas na área de fundos de investimento imobiliário através da investigação dos fatores que hipoteticamente podem colaborar com o crescimento no número de investidores e no volume de negócio num contexto de alta volatilidade da taxa SELIC, do mercado financeiro em geral e da recessão causada pela pandemia de COVID-19 que causou aumento do desemprego e fechamento de imóveis comerciais, que são os principais ativos dos fundos em questão. Assim, a pergunta que se põe é: Quais foram os determinantes do crescimento no número de investidores em fundos imobiliários no período de crise sanitária?
+Tendo em vista o contexto que se apresenta este trabalho, surge a oportunidade de colaborar com o desenvolvimento das pesquisas na área de fundos de investimento imobiliário através da investigação dos fatores que hipoteticamente podem colaborar com o crescimento no número de investidores e no volume de negócio num contexto de alta volatilidade da taxa SELIC, do mercado financeiro em geral e da recessão causada pela pandemia de COVID-19 que causou aumento do desemprego e fechamento de imóveis comerciais, que são os principais ativos dos fundos em questão. Assim, a pergunta que se põe é: **Quais foram os fatores determinantes do crescimento no número de investidores em fundos imobiliários no período de crise sanitária?**
 
-## Objetivos
+## Objetivo geral
 
-Considerando as diversas variáveis que podem estar envolvidas nas dinâmicas de retorno sobre investimento dos FII's, este trabalho realizará uma pesquisa exploratória quantitativa que buscará entender o grau de influência de indicadores como a taxa SELIC, retorno do benchmark do mercado de fundos, pagamento de dividendos e retorno dos 10 fundos com maior volume de negócios em cada categoria no período de 2017 até 2022, período que envolve o pós crise política e a crise sanitária de COVID-19.
+Esta pesquisa tem por objetivo geral verificar de forma quantitativa e qualitativa quais foram os fatores que mais colaboraram para o crescimento no número de investidores do tipo pessoa física na B3 entre 2017 e 2022, especificamente no mercado de fundos de investimento imobiliário.
 
-Apesar de ser uma pesquisa quantitativa, também se pretende analisar os resultados de forma qualitativa, de forma a distcutir os achados com outras referências sobre o assunto. Além disso, também se pretende verificar as correlações entre a performance dos fundos de investimento imobiliário e as diversas variáveis macroeconomicas antes e durante a pandemia de corona vírus, considerando que apesar da taxa SELIC historicamente ser a que mais está relacionada aos FII's, outras variáveis como, o PIB, a taxa de desemprego e a inflação podem ter tido impacto nos resultados das diversas categorias de fundos, dado o ambiente atípico causado pela Pandemia.
+## Objetivos específicos
 
-## Objeto
+Para responder a pergunta de pesquisa, serão tratados como objetivos específicos, considerando o período abordado neste trabalho, de 2017 até 2022:
+
+1.  A obtenção e tratamento das séries temporais de dados do número de investidores em fundos de investimento imobiliário, preços dos fundos selecionados para pesquisa, popularidade do mercado de FII's no *Youtube*, variação da taxa SELIC, taxa de desemprego, PIB e Inflação.
+2.  Escolher um modelo e analisar as correlações e estatísticas das séries temporais escolhidas, de forma a compreender como as mesmas se comportaram ao longo de todo o período, levando em consideração fatores e marcos temporais importantes como as eleições presidenciais de 2018 e 2022, o início da pandemia e as alterações na taxa SELIC.
+3.  Analisar as coorrelações cruzadas entre as variáveis em 3 tempos, antes da pandemia, durante a crise sanitária e após a vacinação, buscando entender se esses eventos afetaram as correlações de alguma forma buscando entender se existe causalidade.
+4.  Desenvolver uma revisão da literatura sobre o perfil do investidor de fundos de investimento imobiliário para compreender quais são os fatores que levam o brasileiro a escolher este tipo de investimento segundo a literatura.
+5.  Analisar e promover uma discussão com os achados a luz de pesquisas e entrevistas realizadas com investidores encontradas na literatura ou realizadas pelos orgãos envolvidos no mercado financeiro Brasileiro como a própria B3 , o Banco Central do Brasil a CVM[^2] e a ANBIMA[^3]
+
+[^2]: Comissão de Valores Mobiliários (CVM) é a entidade responsável por regular e fiscalizar o mercado de valores mobiliários no Brasil.
+
+[^3]: Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais é uma organização que representa as instituições do mercado de capitais brasileiro.
 
 ## Justificativa
 
+A pesquisa se justifica por ter relevância tanto do ponto de vista acadêmico quanto prático. Do ponto de vista acadêmico, o estudo poderá contribuir para o campo de pesquisas sobre fundos de investimento imobiliário, oferecendo achados sobre os fatores que impulsionam o crescimento do número de investidores, especialmente no contexto da crise sanitária causada pela pandemia de COVID-19, considerando que estes foram eventos recentes e que o tema não foi esgotado no contexto acadêmico. Além disso, ao investigar a influência de variáveis como a taxa SELIC, pagamento de dividendos e benchmark do mercado, a pesquisa poderá contribuir para o desenvolvimento das pesquisas sobre compreensão das dinâmicas e tendências do mercado de fundos de investimento imobiliário no Brasil.
+Do ponto de vista prático, os resultados da pesquisa poderão ser úteis para investidores, gestores de fundos e profissionais do mercado financeiro, fornecendo informações para a tomada de decisões de investimento e planejamento estratégico.
+Além disso, o estudo será relevante para órgãos reguladores e entidades do mercado financeiro pois os achados poderão contribuir para a pesquisa na área que ajudam a embasar as políticas públicas e as diretrizes regulatórias, promovendo a transparência, a segurança e a eficiência do mercado financeiro.
+Ademais, a pesquisa também servirá para explorar novos métodos e análise sobre os dados a serem explorados usando o software R[@rcoreteam2022] com a filosofia de reproducibilidade da pesquisa, portanto, outros pesquisadores poderão reproduzir os resultados encontrados neste trabalho em outros períodos no futuro usando os scripts que ficarão disponíveis no repositório deste projeto, a ser divulgado no trabalho final.
+
 ## Referencial Teórico
+
+Este trabalho é ambicioso ao abordar um tema tão vasto como é o mercado financeiro brasileiro, para embasar esta pesquisa uma grande gama de pesquisas acadêmicas foi consultada, porém esta sessão não pretende ser uma revisão sistemática sobre o assunto. Nesta sessão serão abordados os principais conceitos usados neste projeto segundo a literatura sobre o assunto. A pesquisa bibliográfica foi realizada nas bases indexadas Web of Sciece, Scielo, Periódicos Capes, Research Rabbit e Google Acadêmico, o software Zotero foi usado para gerenciar a bibliografia e também para leitura e anotação dos conceitos estudados.
+
+A pesquisa bibliográfica foi realizada com o auxílio de um mapa conceitual, criado para entender de forma qualitativa as relações entre os temas pesquisados. Mapas conceituais são sistemas gráficos criados para organizar e entender as relações entre conceitos através da interconexão com o uso de palavras chave[@novak2010]. O uso dessa ferramenta também será útil no desenvolvimento de outras etapas da pesquisa.
+
+Colocar o mapa conceitual aqui
+
+### Mercado financeiro no Brasil
+
+### O perfil do investidor brasileiro
+
+### Fundos de investimento imobiliário
+
+### Popularização do investimento em renda variável no Brasil
 
 ## Metodologia
 
 ## Cronograma
-
-## Resultados esperados
 
 \newpage
 
