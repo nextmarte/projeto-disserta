@@ -4,7 +4,7 @@ subject: "teste"
 subtitle: "Programa de Pós-Graduação em Administração Mestrado Acadêmico em Administração"
 author: "Marcus Antonio Cardoso Ramalho"
 format:
-  pdf:
+  docx:
     latex_engine: xelatex
     sansfont: Times New Roman
     fontsize: 12pt
@@ -125,7 +125,7 @@ A pesquisa se justifica por ter relevância tanto do ponto de vista acadêmico q
 
 Além disso, ao investigar a influência de variáveis como a taxa SELIC, pagamento de dividendos e benchmark do mercado, a pesquisa poderá contribuir para o desenvolvimento das pesquisas sobre compreensão das dinâmicas e tendências do mercado de fundos de investimento imobiliário no Brasil.
 
-Do ponto de vista prático, os resultados da pesquisa poderão ser úteis para investidores, gestores de fundos e profissionais do mercado financeiro, fornecendo informações para a tomada de decisões de investimento e planejamento estratégico. Além disso, o estudo será relevante para órgãos reguladores e entidades do mercado financeiro pois os achados poderão contribuir para a pesquisa na área que ajudam a embasar as políticas públicas e as diretrizes regulatórias, promovendo a transparência, a segurança e a eficiência do mercado financeiro.
+Do ponto de vista prático, os resultados da pesquisa poderão ser úteis para investidores, gestores de fundos e profissionais do mercado financeiro, fornecendo informações para a tomada de decisões de investimento e planejamento estratégico. Além disso, o estudo será relevante para órgãos reguladores e entidades do mercado financeiro pois os achados poderão contribuir para as pesquisas na área que ajudam a embasar as políticas públicas e as diretrizes regulatórias, promovendo a transparência, a segurança e a eficiência do mercado financeiro.
 
 Ademais, a pesquisa também servirá para explorar novos métodos e análise sobre os dados a serem explorados usando o software R [@rcoreteam2022] com a filosofia de reprodutibilidade da pesquisa, portanto, outros pesquisadores poderão reproduzir os resultados encontrados neste trabalho em outros períodos no futuro usando os scripts que ficarão disponíveis no repositório deste projeto, a ser divulgado no trabalh
 
@@ -141,7 +141,7 @@ A pesquisa bibliográfica foi realizada com o auxílio de um mapa conceitual, cr
 
 Para desenvolver este trabalho será necessário conhecer as características e as dinâmicas do mercado financeiro no Brasil, apesar de ser um estudo de natureza quantitativa, também é uma pesquisa exploratória e por isso se faz necessário entender a história do objeto estudado de seus atores.
 
-Os mercados financeiros existem para viabilizar a intermediação de recursos entre agentes econômicos, proporcionando a negociação de ativos financeiros, como ações, títulos, derivativos, moedas e outros produtos que podem ser criados e negociados a partir da demanda do próprio mercado. [@polacinski2021]
+Os mercados financeiros existem para viabilizar a intermediação de recursos entre agentes econômicos, proporcionando a negociação de ativos financeiros, como ações, títulos, derivativos, moedas e outros produtos que podem ser criados e negociados a partir da demanda do próprio mercado[@polacinski2021].
 
 O mercado de capitais no Brasil é regido pelo Sistema Financeiro Nacional (SFN) que é o conjunto de instituições, normas, regulamentos e mercados que atuam na intermediação de recursos financeiros [@paula2013]. Ele desempenha um papel crucial na economia do país, englobando diversas entidades financeiras, como bancos, cooperativas de crédito, corretoras, seguradoras e outras instituições [@machado2021].
 
@@ -179,9 +179,9 @@ Considerando cada uma das etapas deste processo, a metodologia será dividida em
 
 ### Importação e organização dos dados
 
-A viabilidade e a reprodutibilidade desta pesquisa estão diretamente associadas a necessidade de acesso aos dados, por este motivo deve-se ressaltar a importância dos dados abertos do Sistema Financeiro Nacional. Ortiz [@criado2023] destaca a importância dos dados abertos que permitem que informações relevantes sejam acessíveis ao público, fortalecendo a transparência das organizações públicas e privadas, permitindo que órgãos independentes, pesquisadores e cidadãos em geral possam fiscalizar atividades governamentais e corpor
+A viabilidade e a reprodutibilidade desta pesquisa estão diretamente associadas a necessidade de acesso aos dados, por este motivo deve-se ressaltar a importância dos dados abertos do Sistema Financeiro Nacional. Ortiz [@criado2023] destaca a importância dos dados abertos que permitem que informações relevantes sejam acessíveis ao público, fortalecendo a transparência das organizações públicas e privadas, permitindo que órgãos independentes, pesquisadores e cidadãos em geral possam fiscalizar atividades governamentais e corporativas.
 
-As séries temporais de dados macroeconômicos serão obtidas do portal de dados abertos do Banco Central do Brasil considerando o período de 2017 até 2022, usando interface de programação fornecida pelo próprio órgão através do pacote rbcb [@rbcb] do R. Este conjunto de dados será composto pela taxa SELIC, PIB do país e Inflação.
+As séries temporais de dados macroeconômicos serão obtidas do portal de dados abertos do Banco Central do Brasil considerando o período de 2017 até 2022, usando interface de programação fornecida pelo próprio órgão através do pacote rbcb [@rbcb] do R. Este conjunto de dados será composto pela taxa SELIC, PIB do país e Inflação. O dados sobre o número de investidores será obtido junto a B3, pois também são públicos.
 
 Já os dados de preço diário dos índices do mercado financeiro e do mercado de fundos de investimento imobiliário, bem como os ativos selecionados para o trabalho serão obtidos com a ajuda do pacote quantmod [@quantmod] através da interface com o site Yahoo Finance [@yahoofi2023], usando a mesma janela de tempo dos dados macroeconômicos. Os dados de pagamento dos dividendos serão obtidos no site Clube do FII[@clubefii2020].
 
