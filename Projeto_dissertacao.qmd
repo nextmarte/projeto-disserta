@@ -14,8 +14,8 @@ format:
     keep-tex: false
     number-sections: true
 crossref:
-  fig-title: Gráfico    
-  fig-prefix: gráfico
+  fig-title: Figura   
+  fig-prefix: figura
   tbl-title: Tabela     
   tbl-prefix: tabela
 editor: visual
@@ -51,10 +51,10 @@ Durante décadas, a maior parte dos Brasileiro que conseguia poupar algum dinhei
 
 Um dos tipos de ativos que se tornou muito popular nos últimos 5 anos são os fundos de investimento imobiliário (FII) [@b32023] que por suas características fiscais e nível de risco relativamente baixo acaba se encaixando bem às preferências do pequeno investidor brasileiro, que tem como característica a aversão ao risco, preferindo investir em imóveis e outras opções de renda fixa.
 
-Outro fator que contribuiu para o aumento no número de investidores do tipo pesoa física no mercado dos FII foi a oscilação negativa na taxa SELIC (Sistema Especial de Liquidação e de Custodia)[@jacomassi2022] como pode ser visto no @fig-selic.
+Outro fator que contribuiu para o aumento no número de investidores do tipo pessoa física no mercado dos FII foi a oscilação negativa na taxa SELIC (Sistema Especial de Liquidação e de Custódia) [@jacomassi2022] como pode ser visto na @fig-selic.
 
 ```{r}
-#| fig-cap: "Elaboração própria - fonte: Banco Central do Brasil "
+#| fig-cap: "Elaboração própria adaptada de (Banco Central do Brasil, 2023) "
 #| label: fig-selic
 #| echo: false
 #| cache: true
@@ -63,14 +63,14 @@ Grafico_selic_anual
 
 ```
 
-A taxa básica de juros da economia é definida periodicamente pelo COPOM (Comitê de Política Monetária), ela é uma das principais ferramentas da política monetária e serve como referência para as demais taxas do mercado [@jacomassi2022]. No Brasil o Banco Central usa esse mecanismo principalmente para controle da inflação , porém, historicamente o país sempre teve taxas altas, o que trouxe problemas no controle da dívida publica e na estabilidade do mercado[@jabrh.d.omar2008].
+A taxa básica de juros da economia é definida periodicamente pelo COPOM (Comitê de Política Monetária), ela é uma das principais ferramentas da política monetária e serve como referência para as demais taxas do mercado [@jacomassi2022]. No Brasil o Banco Central usa esse mecanismo principalmente para controle da inflação, porém, historicamente o país sempre teve taxas altas, o que trouxe problemas no controle da dívida pública e na estabilidade do mercado[@jabrh.d.omar2008].
 
-Ainda sobre o crescimento do número de investidores em 2020, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessáriamente está ligado somente a variação da SELIC em 2020 mas também a outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros, algo recente e que segundo pesquisa realizada pela B3[^1] vai de encontro ao fato de que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
+Ainda sobre o crescimento do número de investidores em 2020, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessariamente está ligado somente a variação da SELIC em 2020 mas também a outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros, algo recente e que segundo pesquisa realizada pela B3[^1] vai de encontro ao fato de que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
 
 [^1]: B3 é a sigla para Brasil, Bolsa, Balcão e refere-se à principal bolsa de valores do Brasil
 
 ```{r}
-#| fig-cap: "fonte: Google trends Youtube "
+#| fig-cap: "Obtido de Google trends Youtube "
 #| label: fig-popularity
 #| echo: false
 #| cache: true
@@ -78,10 +78,10 @@ Ainda sobre o crescimento do número de investidores em 2020, foi possível obse
 FII_trend_ggplot
 ```
 
-Isso se confirma ao verificarmos que mesmo com o aumento da taxa SELIC durante a pandemia o número pessoas investindo nos fundos de investimento imobiliário continuou aumentando significativamente como mostra o @fig-investors obtido do relatório mensal sobre os FII's da B3[@b32023a].
+Isso se confirma ao verificarmos que mesmo com o aumento da taxa SELIC durante a pandemia o número pessoas investindo nos fundos de investimento imobiliário continuou aumentando significativamente como mostra a @fig-investors obtido do relatório mensal sobre os FIIs da B3[@b32023].
 
 ```{r}
-#| fig-cap: "fonte: Boletim mensal fundos imobiliários (FIIs) B3 "
+#| fig-cap: "Adaptado de Boletim mensal fundos imobiliários (FIIs) B3 "
 #| label: fig-investors
 #| echo: false
 #| cache: true
@@ -89,27 +89,31 @@ Isso se confirma ao verificarmos que mesmo com o aumento da taxa SELIC durante a
 investidores_custodia
 ```
 
-A diversidade dos tipos de fundos de investimento imobiliário também pode ajudar a entender sua popularização. Os FII\`s são um tipo de produto do mercado financeiro que permite o investimento no mercado imobiliário, ou seja, o administrador do fundo, que possui um ou mais imóveis pode ofertar cotas no mercado, onde investidores podem comprar e revender suas cotas, auferindo retornos referentes a variação dos preços ou os dividendos que podem ser distribuidos pelo fundo periodicamente.
+A diversidade dos tipos de fundos de investimento imobiliário também pode ajudar a entender sua popularização. Os FIIs são um tipo de produto do mercado financeiro que permite o investimento no mercado imobiliário, ou seja, o administrador do fundo, que possui um ou mais imóveis pode ofertar cotas no mercado, onde investidores podem comprar e revender suas cotas, auferindo retornos referentes a variação dos preços ou os dividendos que podem ser distribuídos pelo fundo periodicamente.
 
 ## Problema
 
 Tendo em vista o contexto que se apresenta este trabalho, surge a oportunidade de colaborar com o desenvolvimento das pesquisas na área de fundos de investimento imobiliário através da investigação dos fatores que hipoteticamente podem colaborar com o crescimento no número de investidores e no volume de negócio num contexto de alta volatilidade da taxa SELIC, do mercado financeiro em geral e da recessão causada pela pandemia de COVID-19 que causou aumento do desemprego e fechamento de imóveis comerciais, que são os principais ativos dos fundos em questão. Assim, a pergunta que se põe é: **Quais foram os fatores determinantes do crescimento no número de investidores em fundos imobiliários no período de crise sanitária?**
 
-## Objetivos 
+## Objetivos
 
 ### Geral
 
-Esta pesquisa tem por objetivo geral verificar de forma quantitativa e qualitativa quais foram os fatores que mais colaboraram para o crescimento no número de investidores do tipo pessoa física na B3 entre 2017 e 2022, especificamente no mercado de fundos de investimento imobiliário.
+Esta pesquisa tem por objetivo geral verificar de forma quantitativa e qualitativa quais foram os fatores que mais colaboraram para o crescimento no número de investidores do tipo pessoa física na B3 entre 2017 e 2022, especificamente no mercado de fundos de investimento imobiliário. Portanto se caracteriza como pesquisa quantitativa exploratória e descritiva.
+
+De acordo com [@cesário2020] uma pesquisa quantitativa exploratória descritiva envolve a coleta e análise de dados numa abordagem que busca descrever e explorar fenômenos e características de interesse. É um tipo de pesquisa que combina aspectos quantitativos e qualitativos, utilizando métodos e técnicas estatísticas para obter informações numéricas e descritivas.
 
 ### Específicos
 
-Para responder a pergunta de pesquisa, serão tratados como objetivos específicos, considerando o período abordado neste trabalho, de 2017 até 2022:
+Para responder à pergunta de pesquisa, serão tratados como objetivos específicos, considerando o período abordado neste trabalho, de 2017 até 2022:
 
-1.  A obtenção e tratamento das séries temporais de dados do número de investidores em fundos de investimento imobiliário, preços dos fundos selecionados para pesquisa, popularidade do mercado de FII's no *Youtube*, variação da taxa SELIC, taxa de desemprego, PIB e Inflação.
-2.  Escolher um modelo e analisar as correlações e estatísticas das séries temporais escolhidas, de forma a compreender como as mesmas se comportaram ao longo de todo o período, levando em consideração fatores e marcos temporais importantes como as eleições presidenciais de 2018 e 2022, o início da pandemia e as alterações na taxa SELIC.
-3.  Analisar as coorrelações cruzadas entre as variáveis em 3 tempos, antes da pandemia, durante a crise sanitária e após a vacinação, buscando entender se esses eventos afetaram as correlações de alguma forma buscando entender se existe causalidade.
-4.  Desenvolver uma revisão da literatura sobre o perfil do investidor de fundos de investimento imobiliário para compreender quais são os fatores que levam o brasileiro a escolher este tipo de investimento segundo a literatura.
-5.  Analisar e promover uma discussão com os achados a luz de pesquisas e entrevistas realizadas com investidores encontradas na literatura ou realizadas pelos orgãos envolvidos no mercado financeiro Brasileiro como a própria B3 , o Banco Central do Brasil a CVM[^2] e a ANBIMA[^3]
+1.  A obtenção e tratamento das séries temporais de dados do número de investidores em fundos de investimento imobiliário, preços e dividendos dos fundos selecionados para pesquisa, popularidade do mercado de FIIs no *Youtube*, variação da taxa SELIC, PIB e Inflação.
+2.  Analisar as correlações e estatísticas das séries temporais escolhidas, de forma a compreender como elas se comportaram ao longo de todo o período, levando em consideração fatores e marcos temporais importantes como as eleições presidenciais de 2018 e 2022, o início da pandemia e as alterações na taxa SELIC.
+3.  Analisar as coorrelações cruzadas entre as variáveis em 2 tempos, antes e durante a pandemia, buscando entender se esse evento afetou as correlações de alguma forma.
+4.  Escolher o modelo mais adequado para analisar os dados e descobrir se existe a ocorrência de tendências de longo prazo na variável dependente deste estudo, representada pela série temporal do número de investidores do tipo pessoa física com posíção de custódia de cotas de fundos de investimento imobiliário na B3.
+5.  Verificar o grau de influência da popularidade de cada fundo no Youtube em relação a sua performance no mercado, representada pelos retornos e pagamento de dividendos mensais.
+6.  Desenvolver uma revisão da literatura sobre o perfil do investidor de fundos de investimento imobiliário para compreender quais são os fatores que levam o brasileiro a escolher este tipo de investimento segundo a literatura.
+7.  Analisar e promover uma discussão com os achados da dissertação a luz de pesquisas e entrevistas realizadas com investidores encontradas na literatura ou realizadas pelos órgãos envolvidos no mercado financeiro Brasileiro como a própria B3 , o Banco Central do Brasil a CVM[^2] e a ANBIMA[^3].
 
 [^2]: Comissão de Valores Mobiliários (CVM) é a entidade responsável por regular e fiscalizar o mercado de valores mobiliários no Brasil.
 
@@ -117,54 +121,101 @@ Para responder a pergunta de pesquisa, serão tratados como objetivos específic
 
 ## Justificativa
 
-A pesquisa se justifica por ter relevância tanto do ponto de vista acadêmico quanto prático. Do ponto de vista acadêmico, o estudo poderá contribuir para o campo de pesquisas sobre fundos de investimento imobiliário, oferecendo achados sobre os fatores que impulsionam o crescimento do número de investidores, especialmente no contexto da crise sanitária causada pela pandemia de COVID-19, considerando que estes foram eventos recentes e que o tema não foi esgotado no contexto acadêmico. Além disso, ao investigar a influência de variáveis como a taxa SELIC, pagamento de dividendos e benchmark do mercado, a pesquisa poderá contribuir para o desenvolvimento das pesquisas sobre compreensão das dinâmicas e tendências do mercado de fundos de investimento imobiliário no Brasil.
-Do ponto de vista prático, os resultados da pesquisa poderão ser úteis para investidores, gestores de fundos e profissionais do mercado financeiro, fornecendo informações para a tomada de decisões de investimento e planejamento estratégico.
-Além disso, o estudo será relevante para órgãos reguladores e entidades do mercado financeiro pois os achados poderão contribuir para a pesquisa na área que ajudam a embasar as políticas públicas e as diretrizes regulatórias, promovendo a transparência, a segurança e a eficiência do mercado financeiro.
-Ademais, a pesquisa também servirá para explorar novos métodos e análise sobre os dados a serem explorados usando o software R[@rcoreteam2022] com a filosofia de reproducibilidade da pesquisa, portanto, outros pesquisadores poderão reproduzir os resultados encontrados neste trabalho em outros períodos no futuro usando os scripts que ficarão disponíveis no repositório deste projeto, a ser divulgado no trabalho final.
+A pesquisa se justifica por ter relevância tanto do ponto de vista acadêmico quanto prático. Do ponto de vista acadêmico, o estudo poderá contribuir para o campo de pesquisas sobre fundos de investimento imobiliário, oferecendo achados sobre os fatores que impulsionam o crescimento do número de investidores, especialmente no contexto da crise sanitária causada pela pandemia de COVID-19, considerando que estes foram eventos recentes e que o tema não foi esgotado no contexto acadêmico.
+
+Além disso, ao investigar a influência de variáveis como a taxa SELIC, pagamento de dividendos e benchmark do mercado, a pesquisa poderá contribuir para o desenvolvimento das pesquisas sobre compreensão das dinâmicas e tendências do mercado de fundos de investimento imobiliário no Brasil.
+
+Do ponto de vista prático, os resultados da pesquisa poderão ser úteis para investidores, gestores de fundos e profissionais do mercado financeiro, fornecendo informações para a tomada de decisões de investimento e planejamento estratégico. Além disso, o estudo será relevante para órgãos reguladores e entidades do mercado financeiro pois os achados poderão contribuir para a pesquisa na área que ajudam a embasar as políticas públicas e as diretrizes regulatórias, promovendo a transparência, a segurança e a eficiência do mercado financeiro.
+
+Ademais, a pesquisa também servirá para explorar novos métodos e análise sobre os dados a serem explorados usando o software R [@rcoreteam2022] com a filosofia de reprodutibilidade da pesquisa, portanto, outros pesquisadores poderão reproduzir os resultados encontrados neste trabalho em outros períodos no futuro usando os scripts que ficarão disponíveis no repositório deste projeto, a ser divulgado no trabalh
 
 ## Referencial Teórico
 
-Este trabalho é ambicioso ao abordar um tema tão vasto como é o mercado financeiro brasileiro, para embasar esta pesquisa uma grande gama de pesquisas acadêmicas foi consultada, porém esta sessão não pretende ser uma revisão sistemática sobre o assunto. Nesta sessão serão abordados os principais conceitos usados neste projeto segundo a literatura sobre o assunto. A pesquisa bibliográfica foi realizada nas bases indexadas Web of Sciece, Scielo, Periódicos Capes, Research Rabbit e Google Acadêmico, o software Zotero foi usado para gerenciar a bibliografia e também para leitura e anotação dos conceitos estudados em outras fontes como livros e leis.
+Este trabalho é ambicioso ao abordar um tema tão vasto como é o mercado financeiro brasileiro, para embasar esta pesquisa uma grande gama de pesquisas acadêmicas foi consultada, porém esta parte do trabalho não pretende ser uma revisão sistemática sobre o assunto. Nesta sessão serão abordados conceitos usados neste projeto segundo a literatura sobre o mercado financeiro e os fundos de investimento imobiliário no Brasil. A pesquisa bibliográfica foi realizada nas bases indexadas Web of Sciece, Scielo, Periódicos Capes, Research Rabbit e Scite AI, o software Zotero foi usado para gerenciar a bibliografia e para leitura e anotação dos conceitos estudados em outras fontes como livros e leis.
 
-A pesquisa bibliográfica foi realizada com o auxílio de um mapa conceitual, criado para entender as relações entre os temas pesquisados. Mapas conceituais são sistemas gráficos criados para organizar e entender as relações entre conceitos através da interconexão com o uso de palavras chave[@novak2010]. O uso dessa ferramenta também será útil no desenvolvimento de outras etapas da pesquisa como a metodologia.
+A pesquisa bibliográfica foi realizada com o auxílio de um mapa conceitual, criado para entender as relações entre os temas pesquisados. Mapas conceituais são sistemas gráficos criados para organizar e entender as relações entre conceitos através da interconexão com o uso de palavras-chave [@novak2010], por isso podem ser úteis ao analisar sistemas complexos como o mercado financeiro como mostra a @fig-SFN . O uso dessa ferramenta também será útil no desenvolvimento de outras etapas da pesquisa como a metodologia.
 
-Colocar o mapa conceitual aqui
+![Mapa conceitual do Sistema Financeiro Nacional, elaboração própria adaptada de Banco central do Brasil [@brasil2023] e Neto [@neto2014].](img/SFN.png){#fig-SFN}
 
 ### Mercado financeiro no Brasil
 
 Para desenvolver este trabalho será necessário conhecer as características e as dinâmicas do mercado financeiro no Brasil, apesar de ser um estudo de natureza quantitativa, também é uma pesquisa exploratória e por isso se faz necessário entender a história do objeto estudado de seus atores.
 
-Os mercados financeiros existem para viabilizar a intermediação de recursos entre agentes econômicos, proporcionando a negociação de ativos financeiros, como ações, títulos, derivativos, moedas e outros produtos que podem ser criados enegociados a partir da demanda do próprio mercado. [@polacinski2021]
+Os mercados financeiros existem para viabilizar a intermediação de recursos entre agentes econômicos, proporcionando a negociação de ativos financeiros, como ações, títulos, derivativos, moedas e outros produtos que podem ser criados e negociados a partir da demanda do próprio mercado. [@polacinski2021]
 
-O mercado de capitais no Brasil é regido pelo Sistema Financeiro Nacional (SFN) que é o conjunto de instituições, normas, regulamentos e mercados que atuam na intermediação de recursos financeiros[@paula2013]. Ele desempenha um papel crucial na economia do país, englobando diversas entidades financeiras, como bancos, cooperativas de crédito, corretoras, seguradoras e outras instituições [@machado2021].
+O mercado de capitais no Brasil é regido pelo Sistema Financeiro Nacional (SFN) que é o conjunto de instituições, normas, regulamentos e mercados que atuam na intermediação de recursos financeiros [@paula2013]. Ele desempenha um papel crucial na economia do país, englobando diversas entidades financeiras, como bancos, cooperativas de crédito, corretoras, seguradoras e outras instituições [@machado2021].
 
-O SFN foi instituído pela Lei Nº 4.595, de 31 de dezembro de 1964 que trata da regulação e estrutura do sistema financeiro e que estabelece que seus constituintes são o Conselho Monetário Nacional, o Banco Central, o Banco do Brasil, o Banco Nacional do Desenvolvimento Econômico e as demais instituições financeiras públicas e privadas [@câmaradosdeputados].
+O SFN foi instituído pela Lei Nº 4.595, de 31 de dezembro de 1964 que trata da regulação e estrutura do sistema financeiro e que estabelece que seus constituintes são o Conselho Monetário Nacional, o Banco Central, o Banco do Brasil, o Banco Nacional do Desenvolvimento Econômico e as demais instituições financeiras públicas e privadas [@câmaradosdeputados2023].
 
-De acordo com Neto [@neto2014] as instituições financeiras podem ser divididas em 2 tipos distintos, as bancárias ou monetárias e as não bancárias, as intituições bancárias são aquelas que realizam a intermediação de pagamentos com recursos monetários através de depósitos a vista ou a crédito e são representadas pelos bancos comerciais múltiplos.
+De acordo com Neto [@neto2014] as instituições financeiras podem ser divididas em 2 tipos distintos, as bancárias ou monetárias e as não bancárias, as instituições bancárias são aquelas que realizam a intermediação de pagamentos com recursos monetários através de depósitos à vista ou a crédito e são representadas pelos bancos comerciais múltiplos.
 
 Os bancos comerciais múltiplos foram criados a partir de uma resolução do Conselho Monetário Nacional em 1988 com o intuito de alterar a organização dos bancos, permitindo a organização de várias empresas em uma única pessoa jurídica [@mendes1993].
 
-Já as instituições não bancárias trabalham com ativos não monetários como açõe e letras de câmbio por exemplo e compoem a maior parte das organizações do mercado financeiro, dentre elas Neto [@neto2014] cita as sociedades corretoras, bancos de investimento, sociedades financeiras e sociedades de arrendamento mercantil.
+Já as instituições não bancárias trabalham com ativos não monetários como ações e letras de câmbio por exemplo e compõem a maior parte das organizações do mercado financeiro, dentre elas Neto [@neto2014] cita as sociedades corretoras, bancos de investimento, sociedades financeiras e sociedades de arrendamento mercantil.
 
-Portanto a partir do entendimento do artigo 17 da lei 4595/64 de que ambos os tipos de instituição trabalham com recursos de terceiros, seja nas atividades de depósito, pagamentos ou aplicações [@câmaradosdeputados], que são por definição atividades financeiras, tanto as as instituições bancárias quanto as demais são instituições financeiras [@goettenauer2020].
+Portanto a partir do entendimento do artigo 17 da lei 4595/64 de que ambos os tipos de instituição trabalham com recursos de terceiros, seja nas atividades de depósito, pagamentos ou aplicações [@câmaradosdeputados2023], que são por definição atividades financeiras, tanto as instituições bancárias quanto as demais são instituições financeiras [@goettenauer2020].
 
 Ainda segundo Neto [@neto2014], o Sistema Financeiro Nacional é dividido em dois subsistemas. O normativo, responsável pelo funcionamento do mercado e das instituições que o compõem e o operativo que realiza as operações de intermediação financeira [@neto2014]. Porém próprio Banco Central do Brasil divide a estrutura do sistema em 3 subsistemas do qual fazem parte entidades normativas, supervisoras e operadoras [@brasil2023].
 
-Fazem parte do sistema normativo o Conselho Monetário Nacional, o Conselho Nacional de Seguros Privados e o Conselho Nacional de Previdência Complementar [@brasil2023]. Os orgãos que compoem o sistema de supervisão são o Banco Central do Brasil, a Comissão de Valores Mobiliários, a Superintendência de Seguros Privados e a Superintendência Nacional de Previdência Complementar.[@brasil2023]
+Fazem parte do sistema normativo o Conselho Monetário Nacional, o Conselho Nacional de Seguros Privados e o Conselho Nacional de Previdência Complementar [@brasil2023]. Os órgãos que compõem o sistema de supervisão são o Banco Central do Brasil, a Comissão de Valores Mobiliários, a Superintendência de Seguros Privados e a Superintendência Nacional de Previdência Complementar[@brasil2023].
 
 Dentro do subsistema operativo encontram-se as instituições auxiliares como as bolsas de valores, as sociedades corretoras de valores mobiliários, sociedades distribuidoras de valores mobiliários e agentes autônomos de investimento, que são responsáveis pela intermediação de negócios envolvendo títulos de valores mobiliários [@neto2014].
 
-Os valores mobiliários são ativos negociáveis de pessoa jurídica ou física que representam a participação ou o direito a uma parte do patrimônio do emissor [@rodrigues2017]. Esses ativos que são negociados em bolsas de valores
-
-### O perfil do investidor brasileiro
+Os valores mobiliários são ativos negociáveis de pessoa jurídica ou física que representam a participação ou o direito a uma parte do patrimônio do emissor [@rodrigues2017]. Esses ativos que são negociados em bolsas de valores onde também são negociados títulos públicos federais usados para financiar a união [@neto2014]. Este trabalho irá abordar um tipo específico de ativo do mercado financeiro, os fundos de investimento imobiliário.
 
 ### Fundos de investimento imobiliário
 
-### Popularização do investimento em renda variável no Brasil
+### Estudos anteriores
 
 ## Metodologia
 
-aqui vou falar da obtenção dos dados, como os dados serão tratados, e como serão anali
+A metodologia do trabalho será estruturada para viabilizar o objetivo geral deste projeto, considerando como elementos norteadores do escopo os objetivos específicos já citados. Para isso será aplicada uma estrutura específica usada por Grolemund [@grolemund2023] para exploração de dados, algo que vai de encontro com as características de pesquisa exploratória descritiva que o projeto apresenta.
+
+Para Grolemund [@grolemund2023] a exploração dos dados passa pelo processo de a partir da visualização dos dados gerar diferentes hipóteses que podem ser testadas ajudando na geração de *insights* que podem ser explorados de forma ainda mais profunda a medida que a pesquisa avança [@grolemund2023], este processo é apresentado na @fig-tidyprocess .
+
+![Adaptado de R for Data Science [@grolemund2023].](img/tidydata.png){#fig-tidyprocess}
+
+Considerando cada uma das etapas deste processo, a metodologia será dividida em importação de organização dos dados, transformação, visualização, modelagem e comunicação. Todas estas etapas serão feitas usando as ferramentas que forem mais adequadas para cada tarefa, dentre elas as linguagens de programação R e Python e os softwares Excel e Rapidminer.
+
+### Importação e organização dos dados
+
+A viabilidade e a reprodutibilidade desta pesquisa estão diretamente associadas a necessidade de acesso aos dados, por este motivo deve-se ressaltar a importância dos dados abertos do Sistema Financeiro Nacional. Ortiz [@criado2023] destaca a importância dos dados abertos que permitem que informações relevantes sejam acessíveis ao público, fortalecendo a transparência das organizações públicas e privadas, permitindo que órgãos independentes, pesquisadores e cidadãos em geral possam fiscalizar atividades governamentais e corpor
+
+As séries temporais de dados macroeconômicos serão obtidas do portal de dados abertos do Banco Central do Brasil considerando o período de 2017 até 2022, usando interface de programação fornecida pelo próprio órgão através do pacote rbcb [@rbcb] do R. Este conjunto de dados será composto pela taxa SELIC, PIB do país e Inflação.
+
+Já os dados de preço diário dos índices do mercado financeiro e do mercado de fundos de investimento imobiliário, bem como os ativos selecionados para o trabalho serão obtidos com a ajuda do pacote quantmod [@quantmod] através da interface com o site Yahoo Finance [@yahoofi2023], usando a mesma janela de tempo dos dados macroeconômicos. Os dados de pagamento dos dividendos serão obtidos no site Clube do FII[@clubefii2020].
+
+A premissa para escolha dos ativos será o volume de negociação dos últimos 5 anos, assim, serão selecionados os 5 FIIs mais negociados de cada categoria de fundo de investimento imobiliário, o filtro será realizado na plataforma Clube do FII[@clubefii2020] que disponibiliza.
+
+Os dados sobre a popularidade do mercado e dos fundos analisados no Youtube serão baixados do site Google trends com o auxílio do pacote gtrendR [@gtrendsR], a pesquisa será realizada considerando apenas acessos feitos em território nacional dentro do período delimitado neste projeto.
+
+A última fonte de dados será a pesquisa de revisão da literatura sobre o perfil dos investidores de fundos de investimento imobiliário no Brasil, para essa pesquisa serão considerados os últimos 10 anos pois segundo dados dos relatórios da B3 [@b32023] este foi o período em que houve a maior variação no número de investidores pessoa física. Nessa pesquisa espera-se identificar principalmente: o grau de aversão ao risco do investidor brasileiro, os tipos de FII mais comprados e os motivos que levam ao investimento em períodos de crise.
+
+Após a finalização da etapa de importação, os dados serão importados para uma única tabela, nela as variáveis serão transformadas para valores mensais, eliminando assim a necessidade de adaptar os dados diários das outras variáveis às especificidades do mercado financeiro que funciona somente em dias úteis, o que simplificará as análises posteriores. Entretanto os dados originais permanecerão salvos para viabilizar análises sobre os dados diários caso se julgue necessário nas etapas seguintes.
+
+### Exploração
+
+#### Transformação e visualização
+
+Os dados serão transformados usando o pacote tidyverse[@tidyverse] para permitir a visualização e modelagem que serão realizadas posteriormente, porém também serão usados outros pacotes para cálculo de estatísticas e indicadores financeiros. Nesta etapa serão calculadas as estatísticas descritivas das variáveis selecionadas usando R[@r:ther2023], além disso, os dados serão preparados para visualização das estatísticas das séries temporais no período estudado usando o pacote ggplot2 [@ggplot2]. Assim, serão calculados os retornos lineares dos fundos e dos índices do mercado e outras variáveis como a variação percentual e as médias móveis de todas as variáveis usando as funções do pacote performanceanalytics [@PerformanceAnalytics].
+
+As médias móveis são amplamente utilizadas em séries de dados financeiros para análise e previsão de tendências. Esses modelos, como o *Autoregressive Moving Average* (ARMA) e o ARIMA (*Autoregressive Integrated Moving Average*), são aplicados para reduzir a variabilidade nos dados e capturar padrões e comportamentos de longo prazo nos preços de ativos financeiros [@vallemielke2022], o que servirá para exploração dos modelos posteriormente.
+
+Serão aplicados testes estatísticos para verificar normalidade e correlação, além disso, nesta etapa também serão feitos os testes de estacionariedade, necessários para verificar se as séries temporais apresentam tendência ou padrão ao longo do tempo [@machadodamázio2011], o que será necessário para aplicar o método para medir o grau de correlação cruzada entre as variáveis.
+
+Será aplicada uma análise de correlação cruzada sem tendência(DCCA - Detrended Cross-Correlation Analysis) que é um método usado para analisar as correlações cruzadas entre duas séries temporais não-estacionárias na presença de não-estacionariedade. Ela quantifica as correlações cruzadas em diferentes escalas temporais [@podobnik2008], esta etapa viabilizará o cálculo do rhoDCCA[@zebende2011] para medir o nível da correlação cruzada calculada, esta primeira análise será feita para 2 períodos distintos, de 2017 até 2019 e de 2019 até 2022, entre a variável dependente que é a variação no número de investidores e as variáveis independentes. As visualizações decorrentes desta primeira análise dos dados ajudarão na exploração e modelagem.
+
+#### Modelagem
+
+Nesta etapa serão testados diferentes modelos para medir a relação entre a variável dependente e a demais variáveis quantitativas usadas na pesquisa. Serão testados modelos através de implementação de aprendizado maquina usando a linguagem de programação R [@r:ther2023] e o software Rapidminer Studio[@rapidminer2023] que possui funcionalidades para otimização de modelos, predição, clusterização e identificação de outliers. O modelo com melhor performance para predição da variável dependente será escolhido e implementado em R.
+
+Aprendizado de máquina pode ajudar a entender a relação entre duas ou mais variáveis por meio de modelagem de dados usando diversos tipos de algorítimos como regressão linear generalizada, regressão logística, árvore de decisão, *deep learning* e outros. Essas técnicas são aplicadas em diversos contextos de análise de dados financeiros [@assis2018].
+
+### Comunicação
+
+A etapa de comunicação se dará principalmente na discussão dos achados da pesquisa com os trabalhos já publicadas sobre o tema, além disso, todos os scripts ficarão disponíveis publicamente para que a pesquisa possa ser reproduzida no futuro.
+
+A partir do presente trabalho se planeja a publicação de pelo menos 2 artigos científicos, o primeiro relacionado a revisão da literatura a ser realizada a cerca do perfil do investidor de fundos de investimento imobiliário, o segundo a respeito dos achados a partir da aplicação da metodologia apresentada.
 
 ## Cronograma
 
