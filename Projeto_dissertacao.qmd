@@ -4,7 +4,7 @@ subject: "teste"
 subtitle: "Programa de Pós-Graduação em Administração Mestrado Acadêmico em Administração"
 author: "Marcus Antonio Cardoso Ramalho"
 format:
-  docx:
+  pdf:
     latex_engine: xelatex
     sansfont: Times New Roman
     fontsize: 12pt
@@ -38,6 +38,7 @@ csl: apa.csl
 #| message: false
 #| include: false
 #| cache: true
+
 library(tidyverse)
 library(rbcb)
 
@@ -47,11 +48,9 @@ source("scripts/graficos-macroeconomicos.R")
 
 ## Introdução
 
-Durante décadas, a maior parte dos Brasileiro que conseguia poupar algum dinheiro acabava usando mecanismos de renda fixa que rendiam muito pouco no médio prazo, como a poupança, ou simplesmente usava o depósito bancário para acumular dinheiro sem usufruir dos retornos de renda fixa ou variável. Essa cultura perdura até hoje [@spc2018], porém, tem diminuído diante do aumento de opções de produtos e ativos de investimento e da popularização de plataformas digitais que facilitam o acesso de pessoas físicas a renda variável.
+Um dos tipos de ativos que se tornou muito popular nos últimos 5 anos são os fundos de investimento imobiliário (FII) [@b32023] que por suas características fiscais e nível de risco relativamente baixo acaba se encaixando bem às preferências do pequeno investidor brasileiro, que tem como característica a aversão ao risco, preferindo investir em imóveis e outras opções de renda fixa. Esse movimento se torna ainda mais forte considerando o aumento de opções de produtos e ativos de investimento e da popularização de plataformas digitais que facilitam o acesso de pessoas físicas a renda variável.
 
-Um dos tipos de ativos que se tornou muito popular nos últimos 5 anos são os fundos de investimento imobiliário (FII) [@b32023] que por suas características fiscais e nível de risco relativamente baixo acaba se encaixando bem às preferências do pequeno investidor brasileiro, que tem como característica a aversão ao risco, preferindo investir em imóveis e outras opções de renda fixa.
-
-Outro fator que contribuiu para o aumento no número de investidores do tipo pessoa física no mercado dos FII foi a oscilação negativa na taxa SELIC (Sistema Especial de Liquidação e de Custódia) [@jacomassi2022] como pode ser visto na @fig-selic.
+Outro fator que contribuiu para o aumento no número de investidores do tipo pessoa física no mercado dos FIIs foi a oscilação negativa na taxa SELIC (Sistema Especial de Liquidação e de Custódia) após a crise política de 2016 [@jacomassi2022] como pode ser visto na @fig-selic.
 
 ```{r}
 #| fig-cap: "Elaboração própria adaptada de (Banco Central do Brasil, 2023) "
@@ -63,11 +62,9 @@ Grafico_selic_anual
 
 ```
 
-A taxa básica de juros da economia é definida periodicamente pelo COPOM (Comitê de Política Monetária), ela é uma das principais ferramentas da política monetária e serve como referência para as demais taxas do mercado [@jacomassi2022]. No Brasil o Banco Central usa esse mecanismo principalmente para controle da inflação, porém, historicamente o país sempre teve taxas altas, o que trouxe problemas no controle da dívida pública e na estabilidade do mercado[@jabrh.d.omar2008].
+A taxa básica de juros da economia é definida periodicamente pelo COPOM (Comitê de Política Monetária), ela é uma das principais ferramentas da política monetária e serve como referência para as demais taxas do mercado [@jacomassi2022]. No Brasil o Banco Central usa esse mecanismo principalmente para controle da inflação, porém, historicamente o país sempre teve taxas altas, o que trouxe problemas no controle da dívida pública e na estabilidade do mercado [@jabrh.d.omar2008].
 
-Ainda sobre o crescimento do número de investidores em 2020, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessariamente está ligado somente a variação da SELIC em 2020 mas também a outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros, algo recente e que segundo pesquisa realizada pela B3[^1] vai de encontro ao fato de que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
-
-[^1]: B3 é a sigla para Brasil, Bolsa, Balcão e refere-se à principal bolsa de valores do Brasil
+Ainda sobre o crescimento do número de investidores em 2018, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessariamente está ligado somente a variação da SELIC em 2018 mas também a outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros, algo recente e que segundo pesquisa realizada pela bolsa de valores B3 vai de encontro ao fato de que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
 
 ```{r}
 #| fig-cap: "Obtido de Google trends Youtube "
@@ -89,79 +86,67 @@ Isso se confirma ao verificarmos que mesmo com o aumento da taxa SELIC durante a
 investidores_custodia
 ```
 
-A diversidade dos tipos de fundos de investimento imobiliário também pode ajudar a entender sua popularização. Os FIIs são um tipo de produto do mercado financeiro que permite o investimento no mercado imobiliário, ou seja, o administrador do fundo, que possui um ou mais imóveis pode ofertar cotas no mercado, onde investidores podem comprar e revender suas cotas, auferindo retornos referentes a variação dos preços ou os dividendos que podem ser distribuídos pelo fundo periodicamente.
+De acordo com [@neto2014] "O Fundo de Investimento Imobiliário é um instrumento de investimento coletivo, cujos recursos são captados no mercado e direcionados à aplicações em ativos (empreendimentos) imobiliários." Ele destaca ainda outras característica, como a receita que geralmente é fruto da locação e venda de imóveis comerciais e um indicador de risco para o investidor que é a taxa de ocupação dos imóveis que pertencem ao fundo. [@neto2014].
+
+Um atrativo para o investidor pessoa física é a isenção de imposto de renda para os dividendos distribuídos pelos fundos, porém, o FII deve ter pelo menos cinquenta quotistas, além disso os fundos que distribuem 95% do lucro auferido aos investidores tem incentivos fiscais [@scolese2015].
+
+A diversidade dos tipos de fundos de investimento imobiliário também pode ajudar a entender sua popularização e os retornos podem variar consideravelmente de setor para setor. Alguns dos tipos mais comuns de FIIs são os fundos de tijolo que envolvem investimentos diretos em imóveis físicos como escritórios, shoppings, galpões de logistica, hospitais e escolas ou universidades.
+
+Além disso, existem também os fundos de fundos que investem em outros ativos de dentro ou de fora do setor imobiliário e os fundos de recebíveis, que investem em certificados de recebíveis imobiliários (CRIs) [@neto2014]. Cada tipo ou subtipo tem características que podem influenciar os retornos do investimento dependendo das variações do mercado.
+
+O IFIX é um índice que mede o desempenho médio dos fundos imobiliários listados na bolsa de valores brasileira (B3: Bolsa, Brasil, Balcão) representando a variação dos preços das cotas de uma carteira teórica de ativos. Ele é utilizado como uma referência para acompanhar o desempenho do mercado de fundos imobiliários e auxiliar investidores na tomada de decisões sobre seus investimentos [@moreira2021]. A variação dos retornos da carteira do IFIX está ligada a difersos fatores como a taxa básica de juros, o mercado imobiliário, variações do mercado financeiro e da própria economia.
+
+A @fig-IFIX, gerada usando a função `geom_smooth` do pacote ggplot2 [@ggplot2], ajusta as curvas de retorno anual da SELIC e do IFIX usando o algorítmo loess (*locally weighted polynomial regression)* para facilitar a visualização da variação das duas séries temporais. Esse modelo é uma técnica de regressão não paramétrica usada para estimar relacionamentos não lineares [@lao2021].
+
+```{r}
+#| fig-cap: "Elaboração própria - Regressão dos retornos do IFIX e da taxa SELIC com base nos dados do IFIX [@b32023]."
+#| message: false
+#| label: fig-IFIX
+#| echo: false
+#| cache: false
+
+grafico_comparativo
+```
+
+O gráfico evidencia retornos maiores em períodos de queda da SELIC, o que por sí só não explica a contínua variação positiva no número de investidores de fundos imobiliários mesmo com os baixos retornos da carteira do mercado a partir de 2021.
 
 ## Problema
 
-Tendo em vista o contexto que se apresenta este trabalho, surge a oportunidade de colaborar com o desenvolvimento das pesquisas na área de fundos de investimento imobiliário através da investigação dos fatores que hipoteticamente podem colaborar com o crescimento no número de investidores e no volume de negócio num contexto de alta volatilidade da taxa SELIC, do mercado financeiro em geral e da recessão causada pela pandemia de COVID-19 que causou aumento do desemprego e fechamento de imóveis comerciais, que são os principais ativos dos fundos em questão. Assim, a pergunta que se põe é: **Quais foram os fatores determinantes do crescimento no número de investidores em fundos imobiliários no período de crise sanitária?**
+Tendo em vista o contexto que se apresenta este trabalho, surge a oportunidade de colaborar com o desenvolvimento das pesquisas na área de fundos de investimento imobiliário através da investigação dos fatores que hipoteticamente podem colaborar com o crescimento no número de investidores e no volume de negócio num contexto de alta volatilidade da taxa SELIC, do mercado financeiro em geral e da recessão causada pela pandemia de COVID-19 que causou aumento do desemprego e fechamento de imóveis comerciais, que são os principais ativos dos fundos em questão. Assim, a pergunta que se põe é: **Quais foram os fatores que mais colaboraram para o crescimento no número de investidores em fundos imobiliários entre 2013 e 2023?**
 
 ## Objetivos
 
 ### Geral
 
-Esta pesquisa tem por objetivo geral verificar de forma quantitativa e qualitativa quais foram os fatores que mais colaboraram para o crescimento no número de investidores do tipo pessoa física na B3 entre 2017 e 2022, especificamente no mercado de fundos de investimento imobiliário. Portanto se caracteriza como pesquisa quantitativa exploratória e descritiva.
+Esta pesquisa tem por objetivo geral verificar de forma quantitativa e qualitativa quais foram os fatores que mais colaboraram para o crescimento no número de investidores do tipo pessoa física na B3 entre 2013 e 2023, especificamente no mercado de fundos de investimento imobiliário. Portanto se caracteriza como pesquisa quantitativa exploratória e descritiva.
 
 De acordo com [@cesário2020] uma pesquisa quantitativa exploratória descritiva envolve a coleta e análise de dados numa abordagem que busca descrever e explorar fenômenos e características de interesse. É um tipo de pesquisa que combina aspectos quantitativos e qualitativos, utilizando métodos e técnicas estatísticas para obter informações numéricas e descritivas.
 
 ### Específicos
 
-Para responder à pergunta de pesquisa, serão tratados como objetivos específicos, considerando o período abordado neste trabalho, de 2017 até 2022:
+Para responder à pergunta de pesquisa, serão tratados como objetivos específicos, considerando o período abordado neste trabalho, de 2013 até 2023:
 
-1.  A obtenção e tratamento das séries temporais de dados do número de investidores em fundos de investimento imobiliário, preços e dividendos dos fundos selecionados para pesquisa, popularidade do mercado de FIIs no *Youtube*, variação da taxa SELIC, PIB e Inflação.
-2.  Analisar as correlações e estatísticas das séries temporais escolhidas, de forma a compreender como elas se comportaram ao longo de todo o período, levando em consideração fatores e marcos temporais importantes como as eleições presidenciais de 2018 e 2022, o início da pandemia e as alterações na taxa SELIC.
-3.  Analisar as coorrelações cruzadas entre as variáveis em 2 tempos, antes e durante a pandemia, buscando entender se esse evento afetou as correlações de alguma forma.
-4.  Escolher o modelo mais adequado para analisar os dados e descobrir se existe a ocorrência de tendências de longo prazo na variável dependente deste estudo, representada pela série temporal do número de investidores do tipo pessoa física com posíção de custódia de cotas de fundos de investimento imobiliário na B3.
-5.  Verificar o grau de influência da popularidade de cada fundo no Youtube em relação a sua performance no mercado, representada pelos retornos e pagamento de dividendos mensais.
-6.  Desenvolver uma revisão da literatura sobre o perfil do investidor de fundos de investimento imobiliário para compreender quais são os fatores que levam o brasileiro a escolher este tipo de investimento segundo a literatura.
-7.  Analisar e promover uma discussão com os achados da dissertação a luz de pesquisas e entrevistas realizadas com investidores encontradas na literatura ou realizadas pelos órgãos envolvidos no mercado financeiro Brasileiro como a própria B3 , o Banco Central do Brasil a CVM[^2] e a ANBIMA[^3].
+1.  Desenvolver uma revisão da literatura sobre o perfil do investidor de fundos de investimento imobiliário para compreender quais são os fatores que levam o brasileiro a escolher este tipo de investimento segundo a literatura.
+2.  A obtenção e tratamento das séries temporais de dados do número de investidores em fundos de investimento imobiliário, preços e dividendos dos fundos selecionados para pesquisa, popularidade do mercado de FIIs no *Youtube*, variação da taxa SELIC, PIB e Inflação.
+3.  Analisar as correlações e estatísticas das séries temporais escolhidas, de forma a compreender como elas se comportaram ao longo de todo o período, levando em consideração fatores e marcos temporais importantes como as eleições presidenciais de 2018 e 2022, o início da pandemia e as alterações na taxa SELIC.
+4.  Analisar as coorrelações cruzadas entre as variáveis em 2 tempos, antes e durante a pandemia, buscando entender se esse evento afetou as correlações de alguma forma.
+5.  Escolher o modelo mais adequado para analisar os dados e descobrir se existe a ocorrência de tendências de longo prazo na variável dependente deste estudo, representada pela série temporal do número de investidores do tipo pessoa física com posíção de custódia de cotas de fundos de investimento imobiliário na B3.
+6.  Verificar o grau de influência da popularidade de cada fundo no Youtube em relação a sua performance no mercado já que é nessa plataforma de vídeos que segundo pesquisa realizada pela B3 [@b32020] os investidores do tipo pessoa física mais buscam informações sobre investimento , representada pelos retornos e pagamento de dividendos mensais.
+7.  Analisar e promover uma discussão com os achados da dissertação a luz de pesquisas e entrevistas realizadas com investidores encontradas na literatura ou realizadas pelos órgãos envolvidos no mercado financeiro Brasileiro como a própria B3 , o Banco Central do Brasil a CVM[^1] e a ANBIMA[^2].
 
-[^2]: Comissão de Valores Mobiliários (CVM) é a entidade responsável por regular e fiscalizar o mercado de valores mobiliários no Brasil.
+[^1]: Comissão de Valores Mobiliários (CVM) é a entidade responsável por regular e fiscalizar o mercado de valores mobiliários no Brasil.
 
-[^3]: Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais é uma organização que representa as instituições do mercado de capitais brasileiro.
+[^2]: Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais é uma organização que representa as instituições do mercado de capitais brasileiro.
 
 ## Justificativa
 
-A pesquisa se justifica por ter relevância tanto do ponto de vista acadêmico quanto prático. Do ponto de vista acadêmico, o estudo poderá contribuir para o campo de pesquisas sobre fundos de investimento imobiliário, oferecendo achados sobre os fatores que impulsionam o crescimento do número de investidores, especialmente no contexto da crise sanitária causada pela pandemia de COVID-19, considerando que estes foram eventos recentes e que o tema não foi esgotado no contexto acadêmico.
+A pesquisa se justifica por ter relevância tanto do ponto de vista acadêmico quanto prático. Do ponto de vista acadêmico, o estudo contribuirá para o campo de pesquisas em finanças, oferecendo achados sobre os fatores que impulsionam o crescimento do número de investidores, especialmente no contexto do reconhecimento dos FIIs como alternativa de investimento para pessoas físicas na B3.
 
 Além disso, ao investigar a influência de variáveis como a taxa SELIC, pagamento de dividendos e benchmark do mercado, a pesquisa poderá contribuir para o desenvolvimento das pesquisas sobre compreensão das dinâmicas e tendências do mercado de fundos de investimento imobiliário no Brasil.
 
-Do ponto de vista prático, os resultados da pesquisa poderão ser úteis para investidores, gestores de fundos e profissionais do mercado financeiro, fornecendo informações para a tomada de decisões de investimento e planejamento estratégico. Além disso, o estudo será relevante para órgãos reguladores e entidades do mercado financeiro pois os achados poderão contribuir para as pesquisas na área que ajudam a embasar as políticas públicas e as diretrizes regulatórias, promovendo a transparência, a segurança e a eficiência do mercado financeiro.
-
-Ademais, a pesquisa também servirá para explorar novos métodos e análise sobre os dados a serem explorados usando o software R [@rcoreteam2022] com a filosofia de reprodutibilidade da pesquisa, portanto, outros pesquisadores poderão reproduzir os resultados encontrados neste trabalho em outros períodos no futuro usando os scripts que ficarão disponíveis no repositório deste projeto, a ser divulgado no trabalh
+Do ponto de vista prático, os resultados da pesquisa serão úteis para investidores, gestores de fundos e profissionais do mercado financeiro, fornecendo informações para a tomada de decisões de investimento e planejamento estratégico. Além disso, o estudo será relevante para órgãos reguladores e entidades do mercado financeiro pois os achados poderão propiciar novas pesquisas na área que ajudem a embasar as políticas públicas e as diretrizes regulatórias, promovendo a transparência, a segurança e a eficiência do mercado financeiro. Ademais esta pesquisa produzirá scripts que viabilizarão a reprodução das análises por outros pesquisadores.
 
 ## Referencial Teórico
-
-Este trabalho é ambicioso ao abordar um tema tão vasto como é o mercado financeiro brasileiro, para embasar esta pesquisa uma grande gama de pesquisas acadêmicas foi consultada, porém esta parte do trabalho não pretende ser uma revisão sistemática sobre o assunto. Nesta sessão serão abordados conceitos usados neste projeto segundo a literatura sobre o mercado financeiro e os fundos de investimento imobiliário no Brasil. A pesquisa bibliográfica foi realizada nas bases indexadas Web of Sciece, Scielo, Periódicos Capes, Research Rabbit e Scite AI, o software Zotero foi usado para gerenciar a bibliografia e para leitura e anotação dos conceitos estudados em outras fontes como livros e leis.
-
-A pesquisa bibliográfica foi realizada com o auxílio de um mapa conceitual, criado para entender as relações entre os temas pesquisados. Mapas conceituais são sistemas gráficos criados para organizar e entender as relações entre conceitos através da interconexão com o uso de palavras-chave [@novak2010], por isso podem ser úteis ao analisar sistemas complexos como o mercado financeiro como mostra a @fig-SFN . O uso dessa ferramenta também será útil no desenvolvimento de outras etapas da pesquisa como a metodologia.
-
-![Mapa conceitual do Sistema Financeiro Nacional, elaboração própria adaptada de Banco central do Brasil [@brasil2023] e Neto [@neto2014].](img/SFN.png){#fig-SFN}
-
-### Mercado financeiro no Brasil
-
-Para desenvolver este trabalho será necessário conhecer as características e as dinâmicas do mercado financeiro no Brasil, apesar de ser um estudo de natureza quantitativa, também é uma pesquisa exploratória e por isso se faz necessário entender a história do objeto estudado de seus atores.
-
-Os mercados financeiros existem para viabilizar a intermediação de recursos entre agentes econômicos, proporcionando a negociação de ativos financeiros, como ações, títulos, derivativos, moedas e outros produtos que podem ser criados e negociados a partir da demanda do próprio mercado[@polacinski2021].
-
-O mercado de capitais no Brasil é regido pelo Sistema Financeiro Nacional (SFN) que é o conjunto de instituições, normas, regulamentos e mercados que atuam na intermediação de recursos financeiros [@paula2013]. Ele desempenha um papel crucial na economia do país, englobando diversas entidades financeiras, como bancos, cooperativas de crédito, corretoras, seguradoras e outras instituições [@machado2021].
-
-O SFN foi instituído pela Lei Nº 4.595, de 31 de dezembro de 1964 que trata da regulação e estrutura do sistema financeiro e que estabelece que seus constituintes são o Conselho Monetário Nacional, o Banco Central, o Banco do Brasil, o Banco Nacional do Desenvolvimento Econômico e as demais instituições financeiras públicas e privadas [@câmaradosdeputados2023].
-
-De acordo com Neto [@neto2014] as instituições financeiras podem ser divididas em 2 tipos distintos, as bancárias ou monetárias e as não bancárias, as instituições bancárias são aquelas que realizam a intermediação de pagamentos com recursos monetários através de depósitos à vista ou a crédito e são representadas pelos bancos comerciais múltiplos.
-
-Os bancos comerciais múltiplos foram criados a partir de uma resolução do Conselho Monetário Nacional em 1988 com o intuito de alterar a organização dos bancos, permitindo a organização de várias empresas em uma única pessoa jurídica [@mendes1993].
-
-Já as instituições não bancárias trabalham com ativos não monetários como ações e letras de câmbio por exemplo e compõem a maior parte das organizações do mercado financeiro, dentre elas Neto [@neto2014] cita as sociedades corretoras, bancos de investimento, sociedades financeiras e sociedades de arrendamento mercantil.
-
-Portanto a partir do entendimento do artigo 17 da lei 4595/64 de que ambos os tipos de instituição trabalham com recursos de terceiros, seja nas atividades de depósito, pagamentos ou aplicações [@câmaradosdeputados2023], que são por definição atividades financeiras, tanto as instituições bancárias quanto as demais são instituições financeiras [@goettenauer2020].
-
-Ainda segundo Neto [@neto2014], o Sistema Financeiro Nacional é dividido em dois subsistemas. O normativo, responsável pelo funcionamento do mercado e das instituições que o compõem e o operativo que realiza as operações de intermediação financeira [@neto2014]. Porém próprio Banco Central do Brasil divide a estrutura do sistema em 3 subsistemas do qual fazem parte entidades normativas, supervisoras e operadoras [@brasil2023].
-
-Fazem parte do sistema normativo o Conselho Monetário Nacional, o Conselho Nacional de Seguros Privados e o Conselho Nacional de Previdência Complementar [@brasil2023]. Os órgãos que compõem o sistema de supervisão são o Banco Central do Brasil, a Comissão de Valores Mobiliários, a Superintendência de Seguros Privados e a Superintendência Nacional de Previdência Complementar[@brasil2023].
-
-Dentro do subsistema operativo encontram-se as instituições auxiliares como as bolsas de valores, as sociedades corretoras de valores mobiliários, sociedades distribuidoras de valores mobiliários e agentes autônomos de investimento, que são responsáveis pela intermediação de negócios envolvendo títulos de valores mobiliários [@neto2014].
-
-Os valores mobiliários são ativos negociáveis de pessoa jurídica ou física que representam a participação ou o direito a uma parte do patrimônio do emissor [@rodrigues2017]. Esses ativos que são negociados em bolsas de valores onde também são negociados títulos públicos federais usados para financiar a união [@neto2014]. Este trabalho irá abordar um tipo específico de ativo do mercado financeiro, os fundos de investimento imobiliário.
 
 ### Fundos de investimento imobiliário
 

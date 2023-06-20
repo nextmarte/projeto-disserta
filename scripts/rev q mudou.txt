@@ -1,0 +1,31 @@
+Este trabalho é ambicioso ao abordar um tema tão vasto como é o mercado financeiro brasileiro, para embasar esta pesquisa uma grande gama de pesquisas acadêmicas foi consultada, porém esta parte do trabalho não pretende ser uma revisão sistemática sobre o assunto. Nesta sessão serão abordados conceitos usados neste projeto segundo a literatura sobre o mercado financeiro e os fundos de investimento imobiliário no Brasil. A pesquisa bibliográfica foi realizada nas bases indexadas Web of Sciece, Scielo, Periódicos Capes, Research Rabbit e Scite AI, o software Zotero foi usado para gerenciar a bibliografia e para leitura e anotação dos conceitos estudados em outras fontes como livros e leis.
+
+A pesquisa bibliográfica foi realizada com o auxílio de um mapa conceitual, criado para entender as relações entre os temas pesquisados. Mapas conceituais são sistemas gráficos criados para organizar e entender as relações entre conceitos através da interconexão com o uso de palavras-chave [@novak2010], por isso podem ser úteis ao analisar sistemas complexos como o mercado financeiro como mostra a @fig-SFN . O uso dessa ferramenta também será útil no desenvolvimento de outras etapas da pesquisa como a metodologia.
+
+Mapa conceitual do Sistema Financeiro Nacional, elaboração própria adaptada de Banco central do Brasil [@brasil2023] e Neto [@neto2014].
+
+Mercado financeiro no Brasil
+
+Para desenvolver este trabalho será necessário conhecer as características e as dinâmicas do mercado financeiro no Brasil, apesar de ser um estudo de natureza quantitativa, também é uma pesquisa exploratória e por isso se faz necessário entender a história do objeto estudado de seus atores.
+
+Os mercados financeiros existem para viabilizar a intermediação de recursos entre agentes econômicos, proporcionando a negociação de ativos financeiros, como ações, títulos, derivativos, moedas e outros produtos que podem ser criados e negociados a partir da demanda do próprio mercado[@polacinski2021].
+
+O mercado de capitais no Brasil é regido pelo Sistema Financeiro Nacional (SFN) que é o conjunto de instituições, normas, regulamentos e mercados que atuam na intermediação de recursos financeiros [@paula2013]. Ele desempenha um papel crucial na economia do país, englobando diversas entidades financeiras, como bancos, cooperativas de crédito, corretoras, seguradoras e outras instituições [@machado2021].
+
+O SFN foi instituído pela Lei Nº 4.595, de 31 de dezembro de 1964 que trata da regulação e estrutura do sistema financeiro e que estabelece que seus constituintes são o Conselho Monetário Nacional, o Banco Central, o Banco do Brasil, o Banco Nacional do Desenvolvimento Econômico e as demais instituições financeiras públicas e privadas [@câmaradosdeputados2023].
+
+De acordo com Neto [@neto2014] as instituições financeiras podem ser divididas em 2 tipos distintos, as bancárias ou monetárias e as não bancárias, as instituições bancárias são aquelas que realizam a intermediação de pagamentos com recursos monetários através de depósitos à vista ou a crédito e são representadas pelos bancos comerciais múltiplos.
+
+Os bancos comerciais múltiplos foram criados a partir de uma resolução do Conselho Monetário Nacional em 1988 com o intuito de alterar a organização dos bancos, permitindo a organização de várias empresas em uma única pessoa jurídica [@mendes1993].
+
+Já as instituições não bancárias trabalham com ativos não monetários como ações e letras de câmbio por exemplo e compõem a maior parte das organizações do mercado financeiro, dentre elas Neto [@neto2014] cita as sociedades corretoras, bancos de investimento, sociedades financeiras e sociedades de arrendamento mercantil.
+
+Portanto a partir do entendimento do artigo 17 da lei 4595/64 de que ambos os tipos de instituição trabalham com recursos de terceiros, seja nas atividades de depósito, pagamentos ou aplicações [@câmaradosdeputados2023], que são por definição atividades financeiras, tanto as instituições bancárias quanto as demais são instituições financeiras [@goettenauer2020].
+
+Ainda segundo Neto [@neto2014], o Sistema Financeiro Nacional é dividido em dois subsistemas. O normativo, responsável pelo funcionamento do mercado e das instituições que o compõem e o operativo que realiza as operações de intermediação financeira [@neto2014]. Porém próprio Banco Central do Brasil divide a estrutura do sistema em 3 subsistemas do qual fazem parte entidades normativas, supervisoras e operadoras [@brasil2023].
+
+Fazem parte do sistema normativo o Conselho Monetário Nacional, o Conselho Nacional de Seguros Privados e o Conselho Nacional de Previdência Complementar [@brasil2023]. Os órgãos que compõem o sistema de supervisão são o Banco Central do Brasil, a Comissão de Valores Mobiliários, a Superintendência de Seguros Privados e a Superintendência Nacional de Previdência Complementar[@brasil2023].
+
+Dentro do subsistema operativo encontram-se as instituições auxiliares como as bolsas de valores, as sociedades corretoras de valores mobiliários, sociedades distribuidoras de valores mobiliários e agentes autônomos de investimento, que são responsáveis pela intermediação de negócios envolvendo títulos de valores mobiliários [@neto2014].
+
+Os valores mobiliários são ativos negociáveis de pessoa jurídica ou física que representam a participação ou o direito a uma parte do patrimônio do emissor [@rodrigues2017]. Esses ativos que são negociados em bolsas de valores onde também são negociados títulos públicos federais usados para financiar a união [@neto2014]. Este trabalho irá abordar um tipo específico de ativo do mercado financeiro, os fundos de investimento imobiliário.
