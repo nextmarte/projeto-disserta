@@ -27,8 +27,6 @@ csl: apa.csl
 css: style.css
 ---
 
-
-
 \newpage
 
 <!-- Muda a cor e o título do sumário na segunda página -->
@@ -54,7 +52,7 @@ source("scripts/graficos-macroeconomicos.R")
 
 ## Introdução
 
-Um dos tipos de ativos que se tornou muito popular nos últimos 5 anos são os fundos de investimento imobiliário (FII) [@b32023] que por suas características fiscais e nível de risco relativamente baixo acaba se encaixando bem às preferências do pequeno investidor brasileiro, que tem como característica a aversão ao risco, preferindo investir em imóveis e outras opções de renda fixa. Esse movimento se torna ainda mais forte considerando o aumento de opções de produtos e ativos de investimento e da popularização de plataformas digitais que facilitam o acesso de pessoas físicas a renda variável.
+Um dos tipos de ativos que se popularizaram nos últimos 5 anos foram os fundos de investimento imobiliário (FII) [@b32023] que por suas características fiscais e nível de risco relativamente baixo acaba se encaixando bem às preferências do pequeno investidor brasileiro, que tem como característica a aversão ao risco, preferindo investir em imóveis e outras opções de renda fixa . Esse movimento se torna ainda mais forte considerando o aumento de opções de produtos e ativos de investimento e da popularização de plataformas digitais que facilitam o acesso de pessoas físicas a renda variável.
 
 Outro fator que contribuiu para o aumento no número de investidores do tipo pessoa física no mercado dos FIIs foi a oscilação negativa na taxa SELIC (Sistema Especial de Liquidação e de Custódia) após a crise política de 2016 [@jacomassi2022] como pode ser visto na @fig-selic.
 
@@ -70,7 +68,7 @@ Grafico_selic_anual
 
 A taxa básica de juros da economia é definida periodicamente pelo COPOM (Comitê de Política Monetária), ela é uma das principais ferramentas da política monetária e serve como referência para as demais taxas do mercado [@jacomassi2022]. No Brasil o Banco Central usa esse mecanismo principalmente para controle da inflação, porém, historicamente o país sempre teve taxas altas, o que trouxe problemas no controle da dívida pública e na estabilidade do mercado [@jabrh.d.omar2008].
 
-Ainda sobre o crescimento do número de investidores em 2018, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessariamente está ligado somente a variação da SELIC em 2018 mas também a outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros, algo recente e que segundo pesquisa realizada pela bolsa de valores B3 vai de encontro ao fato de que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
+Ainda sobre o crescimento do número de investidores em 2018, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessariamente está ligado somente a variação da SELIC em 2018 mas também a outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros. Em estudo recente, a bolsa de valores, B3, divulgou que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
 
 ```{r}
 #| fig-cap: "Obtido de Google trends Youtube "
@@ -136,11 +134,7 @@ Para responder à pergunta de pesquisa, serão tratados como objetivos específi
 4.  Analisar as coorrelações cruzadas entre as variáveis em 2 tempos, antes e durante a pandemia, buscando entender se esse evento afetou as correlações de alguma forma.
 5.  Escolher o modelo mais adequado para analisar os dados e descobrir se existe a ocorrência de tendências de longo prazo na variável dependente deste estudo, representada pela série temporal do número de investidores do tipo pessoa física com posíção de custódia de cotas de fundos de investimento imobiliário na B3.
 6.  Verificar o grau de influência da popularidade de cada fundo no Youtube em relação a sua performance no mercado já que é nessa plataforma de vídeos que segundo pesquisa realizada pela B3 [@b32020] os investidores do tipo pessoa física mais buscam informações sobre investimento , representada pelos retornos e pagamento de dividendos mensais.
-7.  Analisar e promover uma discussão com os achados da dissertação a luz de pesquisas e entrevistas realizadas com investidores encontradas na literatura ou realizadas pelos órgãos envolvidos no mercado financeiro Brasileiro como a própria B3 , o Banco Central do Brasil a CVM[^1] e a ANBIMA[^2].
-
-[^1]: Comissão de Valores Mobiliários (CVM) é a entidade responsável por regular e fiscalizar o mercado de valores mobiliários no Brasil.
-
-[^2]: Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais é uma organização que representa as instituições do mercado de capitais brasileiro.
+7.  Analisar e promover uma discussão com os achados da dissertação a luz de pesquisas e entrevistas realizadas com investidores encontradas na literatura ou realizadas pelos órgãos envolvidos no mercado financeiro Brasileiro como a própria B3 , o Banco Central do Brasil a CVM (Comissão de Valores Mobiliários) e a ANBIMA (Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais).
 
 ## Justificativa
 
@@ -154,7 +148,67 @@ Do ponto de vista prático, os resultados da pesquisa serão úteis para investi
 
 ### Fundos de investimento imobiliário
 
-### Estudos anteriores
+Os fundos de investimento imobiliário no Brasil foram instituídos pela lei 8668/1993 [@câmaradosdeputados1993] no contexto da reestruturação da economia e do Plano Real, e hoje são regulamentados pela CVM através da instrução CVM 472/2008.
+
+A literatura sobre fundos de investimento imobiliário têm crescido na última década no Brasil, mas nem sempre os FIIs foram populares do ponto de vista acadêmico, isso fica bem evidente ao se analisar o trabalho de Weise et al. [@weise2017] que fez um estudo bibliométrico em 2017 sobre as publicações sobre Fundos de Investimento Imobiliário e Real State Trusts (REITS) na base indexada Web of Science.
+
+Em seu trabalho Weise et al.[@weise2017] descobriu que o ano com maior número de publicações foi 2016, o periódico com mais artigos citados foi o Journal of Real Estate Finance and Economics e que os trabalhos abordavam predominantemente análise econométrica. Outro achado importante foi o crescimento no número de publicações sobre o tema na última década.
+
+Apesar de trazer importantes contribuições, o trabalho ficou limitado a apenas uma base indexada, o que pode ter limitado os achados. Porém é possível compreender essa limitação na medida em que na época ainda não existia grande quantidade de estudos sobre o tema no Brasil, pois apesar dos REITS ja existirem a décadas nos Estados Unidos, os FIIs brasileiros só se popularizaram nos últimos 10 anos.
+
+Segundo Scolese [@scolese2015] o investidor Brasileiro de FIIs tem por objetivo a diversificação da sua carteira de investimento e a obtenção de dividendos provenientes de alugueis, ele também destaca a percepção de segurança por conta da baixa volatilidade em comparação com outras opções de renda variável. O autor destaca ainda a característica de democratização do investimento imobiliário, antes restrito a grandes grupos empresariais.
+
+Ao analisar o estilo dos fundos imobiliários brasileiros, Scolese [@scolese2015] avaliou através do método de mínimos quadrados ordinários a relação entre os retornos dos FIIs e os índices IGMC-I da FGV, IMA-B5 e IRF-M da Anbima. Os resultados apontaram uma correlação positiva com a valorização do mercado imobiliário e rendimento de alugueis, além disso, ao autor também a aponta a influência da volatilidade do índice bovespa nos fundos, concluindo que os retornos dos FIIs são explicados por todas as variáveis usadas com 95% de confiança, ou seja, tanto os resultados do mercado de renda variável quanto do mercado imobiliário afetam os FIIs.
+
+Seguindo a linha de estratégia de investimentos em fundos de investimento imobiliário, Greenhalgh & Campani [@greenhalgh2023] apresentam um método de seleção de ativos baseado na variação dos dividendos com a estratégia de efeito momento, que se baseia na premissa de que ativos que tiveram boa performance no passado continuarão com o bom desempenho no futuro, com o propósito de verificar se essa estratégia consegue superar os retornos do índice do mercado. Os autores verificaram através da medição do índice Sharpe, Alfa de Fama, do modelo frances de três fatores e das diferenças dos retornos que a performance usando a estratégia de efeito momento foi superior ao retorno do IFIX.
+
+Outros autores tem extrapolado as fronteiras nacionais ao comparar o desempenho dos fundos imobiliários em diferentes países, como é o caso de Alencar & Cosentino [@alencar2011] que analisaram diferentes mercados de fundos imobiliários.
+
+De acordo com Alencar & Cosentino [@alencar2011] o sistema brasileiro de Fundos de Investimento Imobiliário ainda era na primeira década dos anos 2000 muito menor em termos de valor de mercado em comparação com os sistemas dos Estados Unidos, França e Reino Unido, porém, em suas conclusões projetaram o crescimento do mercado nacional que já estava mostrando os primeiro passos do crescimento apresentado na década de 2010. Além disso, aos autores encontraram aderência entre o desemepenho dos FIIs brasileiros com o mercado financeiro nacional, mostrando que essa característica que foi explorada também por Scolese [@scolese2015] em 2015 também era observado nos anos 2000.
+
+A partir dessa breve revisão e dos apontamentos de Weise et al. [@weise2017] em seu estudo bibliométrico foi possível verificar que parte da bibliografia atual sobre FIIs está concentrada em criar e testar estratégias de investimento, oque abre espaço para pesquisas voltadas a entender o comportamento do consumidor deste tipo de ativo e do crescimento do mercado.
+
+### Séries temporais 
+
+Visto que a maior parte das variáveis consideradas neste trabalho são expressas em séries temporais, cabe ressaltar algumas das características que serão usadas no contexto deste trabalho, como a volatilidade, a estacionariedade e estocasticidade. As séries temporais são conjuntos de observações coletadas sequencialmente ao longo do tempo. Elas são caracterizadas pela dependência temporal, ou seja, a observação em um determinado momento depende das observações anteriores.
+
+A estacionariedade é uma propriedade das séries temporais que se refere à estabilidade das suas características estatísticas ao longo do tempo. Uma série temporal é considerada escionária quando suas propriedades estatísticas, como média, variância e autocorrelação, permanecem constantes ao longo do tempo. Isso implica que as tendências, sazonalidades e padrões presentes na série não mudam significativamente ao longo do tempo [@tsay2002].
+
+### Análise de correlação cruzada
+
+Um novo método chamado $\rho_{\text{DCCA}}$ (Detrended Cross Correlation Coefficient) [@zebende2011]tem sido utilizado para verificar a correlação cruzada em diferentes tipos de séries temporais, estacionárias ou não estacionárias, como processos fisiológicos, climatológicos e financeiros em diferentes escalas de tempo.
+
+Uma aplicação para séries temporais de dados financeiros foi feita por Da Silva et al. [@dasilva2015] que mediu o coeficiente de correlação cruzada entre as *blue-ships* (ações de empresas consolidadas na B3) e o índice do mercado o IBOVESPA antes e depois da crise de 2008. Os resultados mostraram um aumento na correlação cruzada após a crise.
+
+Já Pessoa et al.[@pessoa2021] usou essa mesma metodologia para verificar a existência de correlações de longo prazo entre as séries temporais de *commodities* agrilcolas no Brasil entre 2004 e 2017. Os achados apontaram para uma diminuição nas correlações de longo prazo após a crise financeira de 2008.
+
+Para calcular o $\rho_{\text{DCCA}}$, é importante compreender os conceitos de DFA (Detrended Fluctuation Analysis) e DCCA (Detrended Cross-Correlation Analysis).
+
+Peng(1994) introduziu o uso do DFA. Essa técnica é empregada para avaliar a presença de autocorrelação de longo prazo em séries temporais não estacionárias, removendo tendências e analisando as flutuações em diferentes escalas de tempo. O desvio padrão das flutuações é calculado em cada escala, e a inclinação resultante é utilizada como medida do expoente de flutuação. Valores próximos de 0,5 indicam aleatoriedade, enquanto valores maiores ou menores indicam autocorrelação positiva ou negativa de longo prazo, respectivamente [@peng1994].
+
+Com base no DFA, Podobnik & Stanley [@podobnik2008] desenvolveram o DCCA, que permite analisar a correlação cruzada entre duas séries temporais, considerando as possíveis tendências em ambas as séries. O resultado é um coeficiente de correlação cruzada de longo prazo entre as duas séries, o qual pode ser utilizado para identificar possíveis relações de causa e efeito entre elas.[@podobnik2008]
+
+A partir dos trabalhos de C.-K. Peng e Podobnik & Stanley, G.F., Zebende criou o $\rho_{\text{DCCA}}$ com o objetivo de quantificar o nível de correlação cruzada entre duas séries temporais não estacionárias. Esse coeficiente mostra-se mais robusto ao tratar séries temporais não estacionárias do que outros métodos, como o índice de correlação de Pearson, que pode levar a conclusões equivocadas na presença de valores atípicos[@zebende2011]. Portanto, o $\rho_{\text{DCCA}}$ é um indicador adequado para analisar dados em períodos de crise econômica, nos quais observações atípicas podem se tornar mais comuns. De acordo com [@dasilva2015], o cálculo desse coeficiente segue os seguintes passos:
+
+Considerando duas séries temporais, {${x_t}$} e {$y_t$}, com t variando de 1 até N, onde N é o tamanho da série, ambas as séries são integradas.
+
+$xx_k = \sum_{t=1}^{k} x_t$ e $yy_k = \sum_{t=1}^{K} y_t$, onde $k = 1, 2, \ldots, N.$
+
+Em seguida, as séries integradas são divididas em ($N-s$) caixas sobrepostas de comprimento s, respeitando a desigualdade:
+
+$4 \leq s \leq \frac{N}{4}$
+
+O próximo passo envolve o cálculo da tendência local de cada caixa por meio de uma regressão linear de mínimos quadrados para cada uma das séries temporais x e y. A covariância dos resíduos de cada caixa é então calculada.
+
+$F^2_{xy}(s,i) = \frac{1}{s+1} \sum_{k=i}^{i+s} (xx_{k} - xP_i(k)) (yy_k - yP_i(k))$
+
+Após isso, é feita a média de todas as caixas sobrepostas para obter uma nova função de covariância e, consequentemente, o coeficiente de correlação cruzada $\rho_{\text{DCCA}}$.
+
+$F^2_{xy}(s)=\frac{1}{N-s}\sum_{i=1}^{N-s}F^2_{xy}(s,i)$
+
+$\rho_{\text{DCCA}}(s)=\frac{F^2_{xy}(s)}{F_{xx}(s)F_{yy}(s)}$
+
+Os resultados variam de 1 a -1, indicando, respectivamente, correlação cruzada positiva e negativa entre as séries analisadas. Um valor próximo de 0 para $\rho_{\text{DCCA}}$ indica a ausência de correlação cruzada entre as séries. Assim, para séries correlacionadas positivamente, $\rho_{\text{DCCA}}$ é maior que 0, e para séries com anticorrelação, $\rho_{\text{DCCA}}$ é menor que 0 [@pessoa2021].
 
 ## Metodologia
 
@@ -232,6 +286,16 @@ Outro fator limitante, principalmente para a revisão da literatura, é o númer
 Novas variáveis podem surgir no decorrer da pesquisa o que pode afetar o escopo definido nos objetivos específicos do projeto.
 
 ## Cronograma
+
+| Objetivo   | Atividades                                                                                           | Período             |
+|------------------------|------------------------|------------------------|
+| Objetivo 1 | Desenvolver revisão da literatura sobre o perfil do investidor de fundos de investimento imobiliário | Jul 2023 - Set 2023 |
+| Objetivo 2 | Obtenção e tratamento das séries temporais de dados selecionados                                     | Set 2023 - Nov 2023 |
+| Objetivo 3 | Análise das correlações e estatísticas das séries temporais                                          | Nov 2023 - Jan 2024 |
+| Objetivo 4 | Análise das correlações cruzadas entre as variáveis antes e durante a pandemia                       | Jan 2024 - Fev 2024 |
+| Objetivo 5 | Escolha do modelo mais adequado para análise dos dados e identificação de tendências de longo prazo  | Fev 2024 - Mar 2024 |
+| Objetivo 6 | Verificação do grau de influência da popularidade dos fundos no Youtube em relação à sua performance | Mar 2024 - Abr 2024 |
+| Objetivo 7 | Análise e discussão dos resultados obtidos com base na literatura e entrevistas realizadas           | Abr 2024            |
 
 \newpage
 
