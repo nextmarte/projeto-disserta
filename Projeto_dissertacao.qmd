@@ -1,10 +1,13 @@
 ---
-title: "UNIVERSIDADE FEDERAL FLUMINENSE FACULDADE DE ADMINISTRAÇÃO E CIÊNCIAS CONTÁBEIS"
+title: "OS FATORES QUE IMPULSIONARAM O AUMENTO NO NÚMERO DE INVESTIDORES EM FIIS NA B3"
 subject: "teste"
 subtitle: "Programa de Pós-Graduação em Administração Mestrado Acadêmico em Administração"
 author: "Marcus Antonio Cardoso Ramalho"
+
 format:
   pdf:
+    template-partials: 
+    - "before-body.tex" 
     latex_engine: xelatex
     sansfont: Times New Roman
     fontsize: 12pt
@@ -21,7 +24,10 @@ crossref:
 editor: visual
 bibliography: references.bib
 csl: apa.csl
+css: style.css
 ---
+
+
 
 \newpage
 
@@ -120,8 +126,6 @@ Tendo em vista o contexto que se apresenta este trabalho, surge a oportunidade d
 
 Esta pesquisa tem por objetivo geral verificar de forma quantitativa e qualitativa quais foram os fatores que mais colaboraram para o crescimento no número de investidores do tipo pessoa física na B3 entre 2013 e 2023, especificamente no mercado de fundos de investimento imobiliário. Portanto se caracteriza como pesquisa quantitativa exploratória e descritiva.
 
-De acordo com [@cesário2020] uma pesquisa quantitativa exploratória descritiva envolve a coleta e análise de dados numa abordagem que busca descrever e explorar fenômenos e características de interesse. É um tipo de pesquisa que combina aspectos quantitativos e qualitativos, utilizando métodos e técnicas estatísticas para obter informações numéricas e descritivas.
-
 ### Específicos
 
 Para responder à pergunta de pesquisa, serão tratados como objetivos específicos, considerando o período abordado neste trabalho, de 2013 até 2023:
@@ -144,7 +148,7 @@ A pesquisa se justifica por ter relevância tanto do ponto de vista acadêmico q
 
 Além disso, ao investigar a influência de variáveis como a taxa SELIC, pagamento de dividendos e benchmark do mercado, a pesquisa poderá contribuir para o desenvolvimento das pesquisas sobre compreensão das dinâmicas e tendências do mercado de fundos de investimento imobiliário no Brasil.
 
-Do ponto de vista prático, os resultados da pesquisa serão úteis para investidores, gestores de fundos e profissionais do mercado financeiro, fornecendo informações para a tomada de decisões de investimento e planejamento estratégico. Além disso, o estudo será relevante para órgãos reguladores e entidades do mercado financeiro pois os achados poderão propiciar novas pesquisas na área que ajudem a embasar as políticas públicas e as diretrizes regulatórias, promovendo a transparência, a segurança e a eficiência do mercado financeiro. Ademais esta pesquisa produzirá scripts que viabilizarão a reprodução das análises por outros pesquisadores.
+Do ponto de vista prático, os resultados da pesquisa serão úteis para investidores, gestores de fundos e profissionais do mercado financeiro, fornecendo informações para a tomada de decisões de investimento e planejamento estratégico. Além disso, espera-se que o estudo seja relevante para órgãos reguladores e entidades do mercado financeiro, pois os achados poderão propiciar novas pesquisas na área que ajudem na formulação de políticas públicas e as diretrizes regulatórias, promovendo a transparência, a segurança e a eficiência do mercado financeiro. Ademais esta pesquisa produzirá scripts que viabilizarão a reprodução das análises por outros pesquisadores.
 
 ## Referencial Teórico
 
@@ -154,53 +158,78 @@ Do ponto de vista prático, os resultados da pesquisa serão úteis para investi
 
 ## Metodologia
 
-A metodologia do trabalho será estruturada para viabilizar o objetivo geral deste projeto, considerando como elementos norteadores do escopo os objetivos específicos já citados. Para isso será aplicada uma estrutura específica usada por Grolemund [@grolemund2023] para exploração de dados, algo que vai de encontro com as características de pesquisa exploratória descritiva que o projeto apresenta.
+De acordo com [@cesário2020] uma pesquisa exploratória descritiva envolve a coleta e análise de dados numa abordagem que busca descrever e explorar fenômenos e características de interesse. É um tipo de pesquisa que combina aspectos quantitativos e qualitativos, utilizando métodos e técnicas estatísticas para obter informações numéricas e descritivas. Por este motivo a metodologia será desenvolvida em duas frentes, uma revisão da literatura sobre o tema e uma pesquisa exploratória descritiva sobre as variáveis do estudo.
 
-Para Grolemund [@grolemund2023] a exploração dos dados passa pelo processo de a partir da visualização dos dados gerar diferentes hipóteses que podem ser testadas ajudando na geração de *insights* que podem ser explorados de forma ainda mais profunda a medida que a pesquisa avança [@grolemund2023], este processo é apresentado na @fig-tidyprocess .
+### Revisão sistemática da literatura
 
-![Adaptado de R for Data Science [@grolemund2023].](img/tidydata.png){#fig-tidyprocess}
+Será realizada uma revisão da literatura sobre o perfil dos investidores de fundos de investimento imobiliário no Brasil, para essa pesquisa serão considerados os últimos 10 anos pois segundo dados dos relatórios da B3 [@b32023] este foi o período em que houve a maior variação no número de investidores pessoa física. Nessa pesquisa espera-se identificar principalmente: o grau de aversão ao risco do investidor brasileiro, os tipos de FII mais comprados e os motivos que levam ao investimento em períodos de crise.
 
-Considerando cada uma das etapas deste processo, a metodologia será dividida em importação de organização dos dados, transformação, visualização, modelagem e comunicação. Todas estas etapas serão feitas usando as ferramentas que forem mais adequadas para cada tarefa, dentre elas as linguagens de programação R e Python e os softwares Excel e Rapidminer.
+O trabalho se utilizará do método PRISMA (*Preferred Reporting Items for Systematic Reviews and Meta-Analyses*) [@page2021] para elaboração da revisão sistemática da literatura usando a ferramenta Parsifal [@parsifal2023] . Este protocolo é amplamente usado para elaboração de revisões sistemáticas e tem por característica a comunicação do processo, o que garante transparência para o trabalho.
+
+O PRISMA possui uma série de passos [@page2021] [@parsifal2023] para aplicação do método:
+
+1.  Planejamento e delimitação: Nesta etapa é definida a pergunta de pesquisa e os critérios para seleção de artigos como strings de busca para as bases indexadas.
+2.  Obtenção dos dados: Consiste da busca de artigos que sejam relevantes nas bases selecionadas.
+3.  Seleção: Os artigos encontrados são selecionados ou excluídos com base nos critérios definidos no planejamento.
+4.  Avaliação da qualidade: É uma etapa eliminatória e que os artigos selecionados passam por uma avaliação de qualidade, considerando fatores como formato, abrangência e identificação de viéses.
+5.  Extração e análise de dados: Após a leitura dos trabalhos selecionados segue a extração e análise dos dados quando os achados são comparados.
+6.  Relatório final: Seguindo o *checklist*, será apresentado um relato sobre os resultados da revisão.
+
+A condução levará em conta artigos publicados sobre fundos de investimento imobiliário e sobre comportamento do investidor deste tipo de ativo e será realizada na mesma janela de tempo deste trabalho, de 2013 até 2023.
+
+A pesquisa será feita nas bases indexadas Web of Sciece, Scielo e Periódicos Capes além dos sites Research Rabbit e Scite AI.
+
+### Exploração dos dados
+
+A metodologia usará uma estrutura específica difundida por Wickham [@wickham2023] para exploração de dados, algo que vai de encontro com as características de pesquisa exploratória descritiva que o projeto apresenta.
+
+Para Wickham [@wickham2023] a exploração dos dados passa pelo processo de a partir da visualização dos dados gerar diferentes hipóteses que podem ser testadas ajudando na geração de *insights* que podem ser explorados de forma ainda mais profunda a medida que a pesquisa avança [@wickham2023] , este processo é apresentado na @fig-tidyprocess .
+
+![Adaptado de R for Data Science [@wickham2023].](img/tidydata.png){#fig-tidyprocess fig-align="center"}
+
+Considerando a @fig-tidyprocess , a metodologia será dividida em importação de organização dos dados, transformação, visualização, modelagem e comunicação. Todas estas etapas serão feitas usando as ferramentas que forem mais adequadas para cada tarefa, dentre elas as linguagens de programação R e os softwares Excel e Rapidminer [@rapidminer2023].
 
 ### Importação e organização dos dados
 
 A viabilidade e a reprodutibilidade desta pesquisa estão diretamente associadas a necessidade de acesso aos dados, por este motivo deve-se ressaltar a importância dos dados abertos do Sistema Financeiro Nacional. Ortiz [@criado2023] destaca a importância dos dados abertos que permitem que informações relevantes sejam acessíveis ao público, fortalecendo a transparência das organizações públicas e privadas, permitindo que órgãos independentes, pesquisadores e cidadãos em geral possam fiscalizar atividades governamentais e corporativas.
 
-As séries temporais de dados macroeconômicos serão obtidas do portal de dados abertos do Banco Central do Brasil considerando o período de 2017 até 2022, usando interface de programação fornecida pelo próprio órgão através do pacote rbcb [@rbcb] do R. Este conjunto de dados será composto pela taxa SELIC, PIB do país e Inflação. O dados sobre o número de investidores será obtido junto a B3, pois também são públicos.
+As séries temporais de dados macroeconômicos serão obtidas do portal de dados abertos do Banco Central do Brasil considerando o período de 2013 até 2022, usando interface de programação fornecida pelo próprio órgão através do pacote rbcb [@rbcb] do R. Este conjunto de dados será composto pela taxa SELIC, PIB do país e Inflação. O dados sobre o número de investidores será obtido junto a B3 (Bolsa de Valores de São Paulo), pois também são públicos.
 
-Já os dados de preço diário dos índices do mercado financeiro e do mercado de fundos de investimento imobiliário, bem como os ativos selecionados para o trabalho serão obtidos com a ajuda do pacote quantmod [@quantmod] através da interface com o site Yahoo Finance [@yahoofi2023], usando a mesma janela de tempo dos dados macroeconômicos. Os dados de pagamento dos dividendos serão obtidos no site Clube do FII[@clubefii2020].
+Já os dados de preço diário dos índices do mercado financeiro e do mercado de fundos de investimento imobiliário, bem como os ativos selecionados para o trabalho serão obtidos com a ajuda do pacote quantmod [@quantmod] através da interface com o site Yahoo Finance [@yahoofi2023]. Os dados de pagamento dos dividendos serão obtidos no site Clube do FII [@clubefii2023].
 
-A premissa para escolha dos ativos será o volume de negociação dos últimos 5 anos, assim, serão selecionados os 5 FIIs mais negociados de cada categoria de fundo de investimento imobiliário, o filtro será realizado na plataforma Clube do FII[@clubefii2020] que disponibiliza.
+A premissa para escolha dos ativos será o volume de negociação dos últimos 10 anos, assim, serão selecionados os 5 FIIs mais negociados de cada categoria de fundo de investimento imobiliário, o filtro será realizado na plataforma Clube do FII[@clubefii2023] que disponibiliza.
 
 Os dados sobre a popularidade do mercado e dos fundos analisados no Youtube serão baixados do site Google trends com o auxílio do pacote gtrendR [@gtrendsR], a pesquisa será realizada considerando apenas acessos feitos em território nacional dentro do período delimitado neste projeto.
-
-A última fonte de dados será a pesquisa de revisão da literatura sobre o perfil dos investidores de fundos de investimento imobiliário no Brasil, para essa pesquisa serão considerados os últimos 10 anos pois segundo dados dos relatórios da B3 [@b32023] este foi o período em que houve a maior variação no número de investidores pessoa física. Nessa pesquisa espera-se identificar principalmente: o grau de aversão ao risco do investidor brasileiro, os tipos de FII mais comprados e os motivos que levam ao investimento em períodos de crise.
-
-Após a finalização da etapa de importação, os dados serão importados para uma única tabela, nela as variáveis serão transformadas para valores mensais, eliminando assim a necessidade de adaptar os dados diários das outras variáveis às especificidades do mercado financeiro que funciona somente em dias úteis, o que simplificará as análises posteriores. Entretanto os dados originais permanecerão salvos para viabilizar análises sobre os dados diários caso se julgue necessário nas etapas seguintes.
 
 ### Exploração
 
 #### Transformação e visualização
 
-Os dados serão transformados usando o pacote tidyverse[@tidyverse] para permitir a visualização e modelagem que serão realizadas posteriormente, porém também serão usados outros pacotes para cálculo de estatísticas e indicadores financeiros. Nesta etapa serão calculadas as estatísticas descritivas das variáveis selecionadas usando R[@r:ther2023], além disso, os dados serão preparados para visualização das estatísticas das séries temporais no período estudado usando o pacote ggplot2 [@ggplot2]. Assim, serão calculados os retornos lineares dos fundos e dos índices do mercado e outras variáveis como a variação percentual e as médias móveis de todas as variáveis usando as funções do pacote performanceanalytics [@PerformanceAnalytics].
+Os dados serão transformados usando o pacote tidyverse [@tidyverse] para permitir a visualização e modelagem que serão realizadas posteriormente, porém também serão usados outros pacotes para cálculo de estatísticas e indicadores financeiros. Nesta etapa serão calculadas as estatísticas descritivas das variáveis selecionadas usando R [@r:ther2023], além disso, os dados serão preparados para visualização das estatísticas das séries temporais no período estudado usando o pacote ggplot2 [@ggplot2]. Assim, serão calculados os retornos lineares dos fundos e dos índices do mercado e outras variáveis como a variação percentual e as médias móveis de todas as variáveis usando as funções do pacote performanceanalytics [@PerformanceAnalytics].
 
 As médias móveis são amplamente utilizadas em séries de dados financeiros para análise e previsão de tendências. Esses modelos, como o *Autoregressive Moving Average* (ARMA) e o ARIMA (*Autoregressive Integrated Moving Average*), são aplicados para reduzir a variabilidade nos dados e capturar padrões e comportamentos de longo prazo nos preços de ativos financeiros [@vallemielke2022], o que servirá para exploração dos modelos posteriormente.
 
 Serão aplicados testes estatísticos para verificar normalidade e correlação, além disso, nesta etapa também serão feitos os testes de estacionariedade, necessários para verificar se as séries temporais apresentam tendência ou padrão ao longo do tempo [@machadodamázio2011], o que será necessário para aplicar o método para medir o grau de correlação cruzada entre as variáveis.
 
-Será aplicada uma análise de correlação cruzada sem tendência(DCCA - Detrended Cross-Correlation Analysis) que é um método usado para analisar as correlações cruzadas entre duas séries temporais não-estacionárias na presença de não-estacionariedade. Ela quantifica as correlações cruzadas em diferentes escalas temporais [@podobnik2008], esta etapa viabilizará o cálculo do rhoDCCA[@zebende2011] para medir o nível da correlação cruzada calculada, esta primeira análise será feita para 2 períodos distintos, de 2017 até 2019 e de 2019 até 2022, entre a variável dependente que é a variação no número de investidores e as variáveis independentes. As visualizações decorrentes desta primeira análise dos dados ajudarão na exploração e modelagem.
+Será aplicada uma análise de correlação cruzada sem tendência(DCCA - Detrended Cross-Correlation Analysis) que é um método usado para analisar as correlações cruzadas entre duas séries temporais não-estacionárias na presença de não-estacionariedade. Ela quantifica as correlações cruzadas em diferentes escalas temporais [@podobnik2008], esta etapa viabilizará o cálculo do rhoDCCA [@zebende2011] para medir o nível da correlação cruzada entre a variável dependente que é a variação no número de investidores e as variáveis independentes. As visualizações decorrentes desta primeira análise dos dados ajudarão na exploração e modelagem.
 
 #### Modelagem
 
-Nesta etapa serão testados diferentes modelos para medir a relação entre a variável dependente e a demais variáveis quantitativas usadas na pesquisa. Serão testados modelos através de implementação de aprendizado maquina usando a linguagem de programação R [@r:ther2023] e o software Rapidminer Studio[@rapidminer2023] que possui funcionalidades para otimização de modelos, predição, clusterização e identificação de outliers. O modelo com melhor performance para predição da variável dependente será escolhido e implementado em R.
+Nesta etapa serão testados diferentes modelos para medir a relação entre a variável dependente e a demais variáveis quantitativas usadas na pesquisa. Serão testados modelos através de implementação de aprendizado maquina usando a linguagem de programação R [@r:ther2023] e o software Rapidminer Studio [@rapidminer2023] que possui funcionalidades para otimização de modelos, predição, clusterização e identificação de outliers. O modelo com melhor performance para predição da variável dependente será escolhido e implementado em R.
 
-Aprendizado de máquina pode ajudar a entender a relação entre duas ou mais variáveis por meio de modelagem de dados usando diversos tipos de algorítimos como regressão linear generalizada, regressão logística, árvore de decisão, *deep learning* e outros. Essas técnicas são aplicadas em diversos contextos de análise de dados financeiros [@assis2018].
+Aprendizado de máquina pode ajudar a entender a relação entre duas ou mais variáveis por meio de modelagem de dados usando diversos tipos de algorítimos como regressão linear generalizada, regressão logística, árvore de decisão, *xgboost* e outros. Essas técnicas são aplicadas em diversos contextos de análise de dados financeiros [@assis2018].
 
 ### Comunicação
 
-A etapa de comunicação se dará principalmente na discussão dos achados da pesquisa com os trabalhos já publicadas sobre o tema, além disso, todos os scripts ficarão disponíveis publicamente para que a pesquisa possa ser reproduzida no futuro.
+A etapa de comunicação se dará principalmente na discussão entre os resultados da pesquisa com os trabalhos já publicadas sobre o tema. A partir do presente trabalho se planeja a publicação de 2 artigos científicos, o primeiro relacionado a revisão da literatura a ser realizada, o segundo a respeito dos achados do projeto. além disso, todos os *scripts* ficarão disponíveis publicamente para que a pesquisa possa ser reproduzida no futuro após a publicação dos artigos.
 
-A partir do presente trabalho se planeja a publicação de pelo menos 2 artigos científicos, o primeiro relacionado a revisão da literatura a ser realizada a cerca do perfil do investidor de fundos de investimento imobiliário, o segundo a respeito dos achados a partir da aplicação da metodologia apresentada.
+## Limitações do estudo
+
+A primeira limitação identificada esta relacionada a obtenção de dados para todas as variáveis em todo o período, principalmente na etapa de obtenção dos preços dos ativos selecionados segundo o critério de volume de negociações. Essa limitação pode ser superada através da revisão das premissas iniciais sobre a janela da pesquisa.
+
+Outro fator limitante, principalmente para a revisão da literatura, é o número de publicações abordando o perfil do investidor de fundos de investimento imobiliário, o que pode acabar enviesando os resultados desta etapa. Para evitar este problema pode-se abrir essa parte da pesquisa para idenficar o perfil do novo investidor brasileiro, ou seja, quem começou a investir nos últimos 10 anos.
+
+Novas variáveis podem surgir no decorrer da pesquisa o que pode afetar o escopo definido nos objetivos específicos do projeto.
 
 ## Cronograma
 
