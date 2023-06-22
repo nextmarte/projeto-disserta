@@ -52,7 +52,7 @@ source("scripts/graficos-macroeconomicos.R")
 
 ## Introdução
 
-Um dos tipos de ativos que se popularizaram nos últimos 5 anos foram os fundos de investimento imobiliário (FII) [@b32023] que por suas características fiscais e nível de risco relativamente baixo acaba se encaixando bem às preferências do pequeno investidor brasileiro, que tem como característica a aversão ao risco, preferindo investir em imóveis e outras opções de renda fixa . Esse movimento se torna ainda mais forte considerando o aumento de opções de produtos e ativos de investimento e da popularização de plataformas digitais que facilitam o acesso de pessoas físicas a renda variável.
+Um ativo que se popularizou nos últimos 5 anos foram os fundos de investimento imobiliário (FII) [@b32023] que por suas características fiscais e nível de risco relativamente baixo acaba se encaixando bem às preferências do pequeno investidor brasileiro, que tem como característica a aversão ao risco, preferindo investir em imóveis e outras opções de renda fixa . Esse movimento se torna ainda mais forte considerando o aumento de opções de produtos e ativos de investimento e da popularização de plataformas digitais que facilitam o acesso de pessoas físicas a renda variável.
 
 Outro fator que contribuiu para o aumento no número de investidores do tipo pessoa física no mercado dos FIIs foi a oscilação negativa na taxa SELIC (Sistema Especial de Liquidação e de Custódia) após a crise política de 2016 [@jacomassi2022] como pode ser visto na @fig-selic.
 
@@ -68,7 +68,7 @@ Grafico_selic_anual
 
 A taxa básica de juros da economia é definida periodicamente pelo COPOM (Comitê de Política Monetária), ela é uma das principais ferramentas da política monetária e serve como referência para as demais taxas do mercado [@jacomassi2022]. No Brasil o Banco Central usa esse mecanismo principalmente para controle da inflação, porém, historicamente o país sempre teve taxas altas, o que trouxe problemas no controle da dívida pública e na estabilidade do mercado [@jabrh.d.omar2008].
 
-Ainda sobre o crescimento do número de investidores em 2018, foi possível observar um movimento que segundo Jacomassi [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006, o que denota que o aumento no número de investidores do tipo pessoa física não necessariamente está ligado somente a variação da SELIC em 2018 mas também a outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros. Em estudo recente, a bolsa de valores, B3, divulgou que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
+Ainda, sobre o crescimento do número de investidores em 2018 foi possível observar um movimento que segundo Jacomassi & Oliveira [@jacomassi2022] também ocorreu em outros períodos de declínio da taxa SELIC, não necessariamente com um aumento significativo no número de investidores, mas com um aumento no volume de negócios em 2006. Ademais, o aumento no número de investidores do tipo pessoa física não necessariamente está ligado somente a variação da SELIC em 2018. Há outros fatores como os retornos das diversas categorias de fundos, o pagamento de dividendos, e outras variáveis ainda pouco exploradas pela literatura como a popularização de plataformas digitais de investimento e o crescimento de canais de influenciadores financeiros. Em estudo recente, a bolsa de valores, B3, divulgou que 60% dos investidores do tipo pessoa física entrevistados buscam informações relacionadas a investimento junto a influenciadores financeiros em mídias como o *Youtube* [@b32020], esse fator também é denotado ao verificarmos o @fig-popularity que mostra o crescimento da popularidade do termo de pesquisa FII no Youtube nos último 10 anos*.*
 
 ```{r}
 #| fig-cap: "Obtido de Google trends Youtube "
@@ -79,7 +79,7 @@ Ainda sobre o crescimento do número de investidores em 2018, foi possível obse
 FII_trend_ggplot
 ```
 
-Isso se confirma ao verificarmos que mesmo com o aumento da taxa SELIC durante a pandemia o número pessoas investindo nos fundos de investimento imobiliário continuou aumentando significativamente como mostra a @fig-investors obtido do relatório mensal sobre os FIIs da B3[@b32023].
+Isso corrobora para a observação de que com o aumento da taxa SELIC durante a pandemia o número pessoas investindo nos fundos de investimento imobiliário continuou aumentando significativamente como mostra a @fig-investors obtido do relatório mensal sobre os FIIs da B3[@b32023].
 
 ```{r}
 #| fig-cap: "Adaptado de Boletim mensal fundos imobiliários (FIIs) B3 "
@@ -90,17 +90,17 @@ Isso se confirma ao verificarmos que mesmo com o aumento da taxa SELIC durante a
 investidores_custodia
 ```
 
-De acordo com [@neto2014] "O Fundo de Investimento Imobiliário é um instrumento de investimento coletivo, cujos recursos são captados no mercado e direcionados à aplicações em ativos (empreendimentos) imobiliários." Ele destaca ainda outras característica, como a receita que geralmente é fruto da locação e venda de imóveis comerciais e um indicador de risco para o investidor que é a taxa de ocupação dos imóveis que pertencem ao fundo. [@neto2014].
+De acordo com Neto [@neto2014] "O Fundo de Investimento Imobiliário é um instrumento de investimento coletivo, cujos recursos são captados no mercado e direcionados à aplicações em ativos (empreendimentos) imobiliários." Ele ressalta outras característica, como a receita que geralmente é fruto da locação e venda de imóveis comerciais e um indicador de risco para o investidor que é a taxa de ocupação dos imóveis que pertencem ao fundo. [@neto2014].
 
 Um atrativo para o investidor pessoa física é a isenção de imposto de renda para os dividendos distribuídos pelos fundos, porém, o FII deve ter pelo menos cinquenta quotistas, além disso os fundos que distribuem 95% do lucro auferido aos investidores tem incentivos fiscais [@scolese2015].
 
 A diversidade dos tipos de fundos de investimento imobiliário também pode ajudar a entender sua popularização e os retornos podem variar consideravelmente de setor para setor. Alguns dos tipos mais comuns de FIIs são os fundos de tijolo que envolvem investimentos diretos em imóveis físicos como escritórios, shoppings, galpões de logistica, hospitais e escolas ou universidades.
 
-Além disso, existem também os fundos de fundos que investem em outros ativos de dentro ou de fora do setor imobiliário e os fundos de recebíveis, que investem em certificados de recebíveis imobiliários (CRIs) [@neto2014]. Cada tipo ou subtipo tem características que podem influenciar os retornos do investimento dependendo das variações do mercado.
+Além disso, existem também os fundos de fundos que investem em outros ativos de dentro ou de fora do setor imobiliário e os fundos de recebíveis, que investem em certificados de recebíveis [@neto2014]. Cada tipo ou subtipo tem características que podem influenciar os retornos do investimento dependendo das variações do mercado.
 
-O IFIX é um índice que mede o desempenho médio dos fundos imobiliários listados na bolsa de valores brasileira (B3: Bolsa, Brasil, Balcão) representando a variação dos preços das cotas de uma carteira teórica de ativos. Ele é utilizado como uma referência para acompanhar o desempenho do mercado de fundos imobiliários e auxiliar investidores na tomada de decisões sobre seus investimentos [@moreira2021]. A variação dos retornos da carteira do IFIX está ligada a difersos fatores como a taxa básica de juros, o mercado imobiliário, variações do mercado financeiro e da própria economia.
+O IFIX é um índice que representa a variação dos preços das cotas de uma carteira teórica de FIIs. Ele é utilizado como uma referência para acompanhar o desempenho do mercado de fundos imobiliários e auxiliar investidores na tomada de decisões sobre seus investimentos [@moreira2021]. A variação dos retornos da carteira do IFIX está ligada a difersos fatores como a taxa básica de juros, o mercado imobiliário, variações do mercado financeiro e da própria economia.
 
-A @fig-IFIX, gerada usando a função `geom_smooth` do pacote ggplot2 [@ggplot2], ajusta as curvas de retorno anual da SELIC e do IFIX usando o algorítmo loess (*locally weighted polynomial regression)* para facilitar a visualização da variação das duas séries temporais. Esse modelo é uma técnica de regressão não paramétrica usada para estimar relacionamentos não lineares [@lao2021].
+A @fig-IFIX O gráfico evidencia retornos maiores em períodos de queda da SELIC, o que por sí só não explica a contínua variação positiva no número de investidores de fundos imobiliários mesmo com os baixos retornos da carteira do mercado a partir de 2021.
 
 ```{r}
 #| fig-cap: "Elaboração própria - Regressão dos retornos do IFIX e da taxa SELIC com base nos dados do IFIX [@b32023]."
@@ -112,11 +112,9 @@ A @fig-IFIX, gerada usando a função `geom_smooth` do pacote ggplot2 [@ggplot2]
 grafico_comparativo
 ```
 
-O gráfico evidencia retornos maiores em períodos de queda da SELIC, o que por sí só não explica a contínua variação positiva no número de investidores de fundos imobiliários mesmo com os baixos retornos da carteira do mercado a partir de 2021.
+## O problema
 
-## Problema
-
-Tendo em vista o contexto que se apresenta este trabalho, surge a oportunidade de colaborar com o desenvolvimento das pesquisas na área de fundos de investimento imobiliário através da investigação dos fatores que hipoteticamente podem colaborar com o crescimento no número de investidores e no volume de negócio num contexto de alta volatilidade da taxa SELIC, do mercado financeiro em geral e da recessão causada pela pandemia de COVID-19 que causou aumento do desemprego e fechamento de imóveis comerciais, que são os principais ativos dos fundos em questão. Assim, a pergunta que se põe é: **Quais foram os fatores que mais colaboraram para o crescimento no número de investidores em fundos imobiliários entre 2013 e 2023?**
+Este estudo pretende contribuir para a literatura sobre FIIs através da investigação dos fatores que hipoteticamente podem colaborar com o crescimento no número de investidores e no volume de negócio num contexto de alta volatilidade da taxa SELIC, do mercado financeiro em geral e do arrefecimento da economia causada pela pandemia de COVID-19 que causou aumento do desemprego e fechamento de imóveis comerciais, que são os principais ativos dos fundos em questão. Assim, a pergunta que se põe é: Quais foram os fatores que colaboraram para o crescimento no número de investidores em fundos imobiliários entre 2013 e 2023?
 
 ## Objetivos
 
@@ -128,9 +126,9 @@ Esta pesquisa tem por objetivo geral verificar de forma quantitativa e qualitati
 
 Para responder à pergunta de pesquisa, serão tratados como objetivos específicos, considerando o período abordado neste trabalho, de 2013 até 2023:
 
-1.  Desenvolver uma revisão da literatura sobre o perfil do investidor de fundos de investimento imobiliário para compreender quais são os fatores que levam o brasileiro a escolher este tipo de investimento segundo a literatura.
+1.  Desenvolver uma revisão da literatura sobre o perfil do investidor de fundos de investimento imobiliário para compreender quais são os fatores que levam o brasileiro a escolher este tipo de investimento.
 2.  A obtenção e tratamento das séries temporais de dados do número de investidores em fundos de investimento imobiliário, preços e dividendos dos fundos selecionados para pesquisa, popularidade do mercado de FIIs no *Youtube*, variação da taxa SELIC, PIB e Inflação.
-3.  Analisar as correlações e estatísticas das séries temporais escolhidas, de forma a compreender como elas se comportaram ao longo de todo o período, levando em consideração fatores e marcos temporais importantes como as eleições presidenciais de 2018 e 2022, o início da pandemia e as alterações na taxa SELIC.
+3.  Analisar as estatísticas das séries temporais escolhidas, de forma a compreender como elas se comportaram ao longo de todo o período, levando em consideração fatores e marcos temporais importantes como as eleições presidenciais de 2018 e 2022, o início da pandemia e as alterações na taxa SELIC.
 4.  Analisar as coorrelações cruzadas entre as variáveis em 2 tempos, antes e durante a pandemia, buscando entender se esse evento afetou as correlações de alguma forma.
 5.  Escolher o modelo mais adequado para analisar os dados e descobrir se existe a ocorrência de tendências de longo prazo na variável dependente deste estudo, representada pela série temporal do número de investidores do tipo pessoa física com posíção de custódia de cotas de fundos de investimento imobiliário na B3.
 6.  Verificar o grau de influência da popularidade de cada fundo no Youtube em relação a sua performance no mercado já que é nessa plataforma de vídeos que segundo pesquisa realizada pela B3 [@b32020] os investidores do tipo pessoa física mais buscam informações sobre investimento , representada pelos retornos e pagamento de dividendos mensais.
@@ -150,13 +148,13 @@ Do ponto de vista prático, os resultados da pesquisa serão úteis para investi
 
 Os fundos de investimento imobiliário no Brasil foram instituídos pela lei 8668/1993 [@câmaradosdeputados1993] no contexto da reestruturação da economia e do Plano Real, e hoje são regulamentados pela CVM através da instrução CVM 472/2008.
 
-A literatura sobre fundos de investimento imobiliário têm crescido na última década no Brasil, mas nem sempre os FIIs foram populares do ponto de vista acadêmico, isso fica bem evidente ao se analisar o trabalho de Weise et al. [@weise2017] que fez um estudo bibliométrico em 2017 sobre as publicações sobre Fundos de Investimento Imobiliário e Real State Trusts (REITS) na base indexada Web of Science.
+A literatura sobre fundos de investimento imobiliário têm crescido na última década no Brasil, mas nem sempre os FIIs foram populares do ponto de vista acadêmico, isso fica bem evidente ao se analisar o trabalho de Weise et al. [@weise2017] que fez um estudo bibliométrico sobre as publicações sobre Fundos de Investimento Imobiliário e Real State Trusts (REITS) na base indexada Web of Science.
 
-Em seu trabalho Weise et al.[@weise2017] descobriu que o ano com maior número de publicações foi 2016, o periódico com mais artigos citados foi o Journal of Real Estate Finance and Economics e que os trabalhos abordavam predominantemente análise econométrica. Outro achado importante foi o crescimento no número de publicações sobre o tema na última década.
+Em seu trabalho Weise et al.[@weise2017] descobriu que o ano com maior número de publicações foi 2016, o periódico com mais artigos citados foi o *Journal of Real Estate Finance and Economics* e que os trabalhos abordavam predominantemente análise econométrica. Outro achado importante foi o crescimento no número de publicações sobre o tema na última década.
 
 Apesar de trazer importantes contribuições, o trabalho ficou limitado a apenas uma base indexada, o que pode ter limitado os achados. Porém é possível compreender essa limitação na medida em que na época ainda não existia grande quantidade de estudos sobre o tema no Brasil, pois apesar dos REITS ja existirem a décadas nos Estados Unidos, os FIIs brasileiros só se popularizaram nos últimos 10 anos.
 
-Segundo Scolese [@scolese2015] o investidor Brasileiro de FIIs tem por objetivo a diversificação da sua carteira de investimento e a obtenção de dividendos provenientes de alugueis, ele também destaca a percepção de segurança por conta da baixa volatilidade em comparação com outras opções de renda variável. O autor destaca ainda a característica de democratização do investimento imobiliário, antes restrito a grandes grupos empresariais.
+Segundo Scolese [@scolese2015] o investidor Brasileiro de FIIs tem por objetivo a diversificação da sua carteira de investimento e a obtenção de dividendos provenientes de alugueis, ele também destaca a percepção de segurança por conta da baixa volatilidade em comparação com outras opções de renda variável. O autor aponta ainda a característica de democratização do investimento imobiliário, antes restrito a grandes grupos empresariais.
 
 Ao analisar o estilo dos fundos imobiliários brasileiros, Scolese [@scolese2015] avaliou através do método de mínimos quadrados ordinários a relação entre os retornos dos FIIs e os índices IGMC-I da FGV, IMA-B5 e IRF-M da Anbima. Os resultados apontaram uma correlação positiva com a valorização do mercado imobiliário e rendimento de alugueis, além disso, ao autor também a aponta a influência da volatilidade do índice bovespa nos fundos, concluindo que os retornos dos FIIs são explicados por todas as variáveis usadas com 95% de confiança, ou seja, tanto os resultados do mercado de renda variável quanto do mercado imobiliário afetam os FIIs.
 
@@ -164,15 +162,9 @@ Seguindo a linha de estratégia de investimentos em fundos de investimento imobi
 
 Outros autores tem extrapolado as fronteiras nacionais ao comparar o desempenho dos fundos imobiliários em diferentes países, como é o caso de Alencar & Cosentino [@alencar2011] que analisaram diferentes mercados de fundos imobiliários.
 
-De acordo com Alencar & Cosentino [@alencar2011] o sistema brasileiro de Fundos de Investimento Imobiliário ainda era na primeira década dos anos 2000 muito menor em termos de valor de mercado em comparação com os sistemas dos Estados Unidos, França e Reino Unido, porém, em suas conclusões projetaram o crescimento do mercado nacional que já estava mostrando os primeiro passos do crescimento apresentado na década de 2010. Além disso, aos autores encontraram aderência entre o desemepenho dos FIIs brasileiros com o mercado financeiro nacional, mostrando que essa característica que foi explorada também por Scolese [@scolese2015] em 2015 também era observado nos anos 2000.
+De acordo com Alencar & Cosentino [@alencar2011] o sistema brasileiro de Fundos de Investimento Imobiliário na ocasião da pesquisa era muito menor em termos de valor de mercado em comparação com os sistemas dos Estados Unidos, França e Reino Unido, porém, em suas conclusões projetaram o crescimento do mercado nacional que já estava mostrando os primeiro passos do crescimento apresentado na década de 2010. Além disso, as autores encontraram aderência entre o desemepenho dos FIIs brasileiros com o mercado financeiro nacional, ressaltando a mesma característica que foi explorada por Scolese [@scolese2015].
 
-A partir dessa breve revisão e dos apontamentos de Weise et al. [@weise2017] em seu estudo bibliométrico foi possível verificar que parte da bibliografia atual sobre FIIs está concentrada em criar e testar estratégias de investimento, oque abre espaço para pesquisas voltadas a entender o comportamento do consumidor deste tipo de ativo e do crescimento do mercado.
-
-### Séries temporais 
-
-Visto que a maior parte das variáveis consideradas neste trabalho são expressas em séries temporais, cabe ressaltar algumas das características que serão usadas no contexto deste trabalho, como a volatilidade, a estacionariedade e estocasticidade. As séries temporais são conjuntos de observações coletadas sequencialmente ao longo do tempo. Elas são caracterizadas pela dependência temporal, ou seja, a observação em um determinado momento depende das observações anteriores.
-
-A estacionariedade é uma propriedade das séries temporais que se refere à estabilidade das suas características estatísticas ao longo do tempo. Uma série temporal é considerada escionária quando suas propriedades estatísticas, como média, variância e autocorrelação, permanecem constantes ao longo do tempo. Isso implica que as tendências, sazonalidades e padrões presentes na série não mudam significativamente ao longo do tempo [@tsay2002].
+A partir dessa breve revisão e dos apontamentos de Weise et al. [@weise2017] em seu estudo bibliométrico foi possível verificar que parte da bibliografia atual sobre FIIs está concentrada em criar e testar estratégias de investimento, o que abre espaço para pesquisas voltadas a entender o comportamento do investidor deste tipo de ativo e do crescimento do mercado.
 
 ### Análise de correlação cruzada
 
@@ -182,9 +174,7 @@ Uma aplicação para séries temporais de dados financeiros foi feita por Da Sil
 
 Já Pessoa et al.[@pessoa2021] usou essa mesma metodologia para verificar a existência de correlações de longo prazo entre as séries temporais de *commodities* agrilcolas no Brasil entre 2004 e 2017. Os achados apontaram para uma diminuição nas correlações de longo prazo após a crise financeira de 2008.
 
-Para calcular o $\rho_{\text{DCCA}}$, é importante compreender os conceitos de DFA (Detrended Fluctuation Analysis) e DCCA (Detrended Cross-Correlation Analysis).
-
-Peng(1994) introduziu o uso do DFA. Essa técnica é empregada para avaliar a presença de autocorrelação de longo prazo em séries temporais não estacionárias, removendo tendências e analisando as flutuações em diferentes escalas de tempo. O desvio padrão das flutuações é calculado em cada escala, e a inclinação resultante é utilizada como medida do expoente de flutuação. Valores próximos de 0,5 indicam aleatoriedade, enquanto valores maiores ou menores indicam autocorrelação positiva ou negativa de longo prazo, respectivamente [@peng1994].
+Para calcular o $\rho_{\text{DCCA}}$, é importante compreender os conceitos de DFA (Detrended Fluctuation Analysis) e DCCA (Detrended Cross-Correlation Analysis). A DFA é empregada para avaliar a presença de autocorrelação de longo prazo em séries temporais não estacionárias, removendo tendências e analisando as flutuações em diferentes escalas de tempo. O desvio padrão das flutuações é calculado em cada escala, e a inclinação resultante é utilizada como medida do expoente de flutuação. Valores próximos de 0,5 indicam aleatoriedade, enquanto valores maiores ou menores indicam autocorrelação positiva ou negativa de longo prazo, respectivamente [@peng1994].
 
 Com base no DFA, Podobnik & Stanley [@podobnik2008] desenvolveram o DCCA, que permite analisar a correlação cruzada entre duas séries temporais, considerando as possíveis tendências em ambas as séries. O resultado é um coeficiente de correlação cruzada de longo prazo entre as duas séries, o qual pode ser utilizado para identificar possíveis relações de causa e efeito entre elas.[@podobnik2008]
 
@@ -216,22 +206,20 @@ De acordo com [@cesário2020] uma pesquisa exploratória descritiva envolve a co
 
 ### Revisão sistemática da literatura
 
-Será realizada uma revisão da literatura sobre o perfil dos investidores de fundos de investimento imobiliário no Brasil, para essa pesquisa serão considerados os últimos 10 anos pois segundo dados dos relatórios da B3 [@b32023] este foi o período em que houve a maior variação no número de investidores pessoa física. Nessa pesquisa espera-se identificar principalmente: o grau de aversão ao risco do investidor brasileiro, os tipos de FII mais comprados e os motivos que levam ao investimento em períodos de crise.
+Será realizada uma revisão da literatura sobre o perfil dos investidores de fundos de investimento imobiliário no Brasil, para essa pesquisa serão considerados os últimos 10 anos pois segundo dados dos relatórios da B3 [@b32023] este foi o período em que houve a maior variação no número de investidores pessoa física. Nessa pesquisa espera-se identificar principalmente: o grau de exposição ao risco do investidor brasileiro, os tipos de FII mais comprados e os motivos que levam ao investimento em períodos de crise.
 
-O trabalho se utilizará do método PRISMA (*Preferred Reporting Items for Systematic Reviews and Meta-Analyses*) [@page2021] para elaboração da revisão sistemática da literatura usando a ferramenta Parsifal [@parsifal2023] . Este protocolo é amplamente usado para elaboração de revisões sistemáticas e tem por característica a comunicação do processo, o que garante transparência para o trabalho.
+O trabalho se utilizará do método PRISMA (*Preferred Reporting Items for Systematic Reviews and Meta-Analyses*) [@page2021] para elaboração da revisão sistemática da literatura usando a ferramenta Parsifal [@parsifal2023d]. Este protocolo é amplamente usado para elaboração de revisões sistemáticas e tem por característica a comunicação do processo, o que garante transparência para o trabalho.
 
-O PRISMA possui uma série de passos [@page2021] [@parsifal2023] para aplicação do método:
+O PRISMA possui uma série de passos [@page2021] [@parsifal2023D] para aplicação do método:
 
 1.  Planejamento e delimitação: Nesta etapa é definida a pergunta de pesquisa e os critérios para seleção de artigos como strings de busca para as bases indexadas.
 2.  Obtenção dos dados: Consiste da busca de artigos que sejam relevantes nas bases selecionadas.
 3.  Seleção: Os artigos encontrados são selecionados ou excluídos com base nos critérios definidos no planejamento.
 4.  Avaliação da qualidade: É uma etapa eliminatória e que os artigos selecionados passam por uma avaliação de qualidade, considerando fatores como formato, abrangência e identificação de viéses.
 5.  Extração e análise de dados: Após a leitura dos trabalhos selecionados segue a extração e análise dos dados quando os achados são comparados.
-6.  Relatório final: Seguindo o *checklist*, será apresentado um relato sobre os resultados da revisão.
+6.  Relatório final: Seguindo o *checklist* PRISMA, onde será apresentado um relato sistemático sobre os resultados da revisão.
 
-A condução levará em conta artigos publicados sobre fundos de investimento imobiliário e sobre comportamento do investidor deste tipo de ativo e será realizada na mesma janela de tempo deste trabalho, de 2013 até 2023.
-
-A pesquisa será feita nas bases indexadas Web of Sciece, Scielo e Periódicos Capes além dos sites Research Rabbit e Scite AI.
+A condução levará em conta artigos publicados sobre fundos de investimento imobiliário e sobre comportamento do investidor deste tipo de ativo e será realizada na mesma janela de tempo deste trabalho, de 2013 até 2023. A pesquisa será feita nas bases indexadas Web of Sciece, Scielo e Periódicos Capes além dos sites Research Rabbit e Scite AI.
 
 ### Exploração dos dados
 
@@ -241,7 +229,7 @@ Para Wickham [@wickham2023] a exploração dos dados passa pelo processo de a pa
 
 ![Adaptado de R for Data Science [@wickham2023].](img/tidydata.png){#fig-tidyprocess fig-align="center"}
 
-Considerando a @fig-tidyprocess , a metodologia será dividida em importação de organização dos dados, transformação, visualização, modelagem e comunicação. Todas estas etapas serão feitas usando as ferramentas que forem mais adequadas para cada tarefa, dentre elas as linguagens de programação R e os softwares Excel e Rapidminer [@rapidminer2023].
+Considerando a @fig-tidyprocess , a metodologia será dividida em importação e organização dos dados, transformação, visualização, modelagem e comunicação. Todas estas etapas serão feitas usando as ferramentas que forem mais adequadas para cada tarefa, dentre elas as linguagens de programação R e os softwares Excel e Rapidminer [@rapidminer2023].
 
 ### Importação e organização dos dados
 
