@@ -1,0 +1,14 @@
+---
+title: |
+     Os fatores que impulsionaram o aumento\ no número de investidores em fiis na b3
+subtitle: |
+       Programa de Pós-Graduação em Administração\ 
+       Mestrado Acadêmico em Administração
+author: "Marcus Antonio Cardoso Ramalho"
+format: revealjs
+editor: visual
+logo: "https://ppgad.uff.br/wp-content/uploads/sites/96/2022/08/ppgad-logo.jpg"
+date: 06/26/2023
+date-format: "D-MM-YYYY"
+css: style.css
+---
