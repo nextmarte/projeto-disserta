@@ -13,7 +13,7 @@ library(quantmod)
 selic <- rbcb::get_series(11)
 
 selic <- selic %>% 
-  filter(date > as.Date("2012-01-01") & date < as.Date("2023-03-09")) %>% 
+  filter(date > as.Date("2012-12-30") & date < as.Date("2023-03-09")) %>% 
   rename(SELIC = `11`)
 
 
@@ -101,42 +101,42 @@ FII_trend_ggplot <-  ggplot(FII_trend_plot, aes(x = year, y = total_hits)) +
 # selic vs ifix -----------------------------------------------------------
 
 # Converter ifix_returns para um data frame
-ifix_data <- ifix_returns %>% 
-  tk_tbl(rename_index = "Data") 
-ifix_data$Data <- format(as.Date(ifix_data$Data), "%m-%Y")
-  
 
-# # Filtro de datas
-# ifix_data <- ifix_data %>% filter(Data <= as.Date("2022-12")) 
- selic_data <- anual_selic 
- selic_data$Data <- format(as.Date(anual_selic$Data), "%m-%Y")
- 
- comparativo <- full_join(ifix_data,selic_data,by=NULL) %>% slice(-12)
- colnames(comparativo) <- c("DATA","IFIX", "SELIC") 
- 
-# comparativo <- comparativo %>% 
-#   pivot_longer(cols = 2:3,
-#                values_to = "returns")
-# 
-# ggplot(data = comparativo, aes(x = DATA, y = returns, color = name)) +
-#   geom_line(data = subset(comparativo, name == "IFIX"), linetype = "solid") +
-#   geom_line(data = subset(comparativo, name == "SELIC"), linetype = "dashed") +
-#   labs(x = "Data", y = "Retornos", color = "Nome") +
-#   theme_minimal()
- 
- 
-# Gráfico comparativo com linhas suavizadas e legendas
-grafico_comparativo <- ggplot() +
-  geom_smooth(data = comparativo, aes(x = DATA, y = IFIX, color = "IFIX"), linetype = "solid", size = 1, se=FALSE) +
-  geom_smooth(data = comparativo, aes(x = DATA, y = SELIC, color = "SELIC"), linetype = "dashed", size = 1, se=FALSE) +
-  labs(title = "Retornos anuais do IFIX vs Taxa SELIC 2013-2023", x = "Data", y = "Retornos / Taxa % a.a",
-       color = "") +
-  scale_y_continuous(labels = scales::percent) +
+comparativo <- ifix_returns %>% 
+    cbind(month_selic$SELIC) 
+
+colnames(comparativo) <- c("DATA","IFIX", "SELIC") 
+
+
+comparativo_anim <- comparativo %>% 
+  pivot_longer(cols = 2:3,names_to = "Ativo",values_to = "Retorno")
+
+
+comparativo_anim  %>%
+  ggplot() +
+  aes(x = DATA, y = Retorno, colour = Ativo) +
+  geom_line(se=FALSE) +
   scale_color_manual(values = c("IFIX" = "black", "SELIC" = "darkgray"),
-                     labels = c("IFIX", "SELIC")) +
-  theme_minimal() +
-  ggeasy::easy_center_title() +
-  theme(legend.position = "bottom")
+                     labels = c("IFIX", "SELIC"))+
+  scale_y_continuous(labels = scales::percent)+
+  gganimate::transition_reveal(DATA)+
+  theme_minimal()
+ 
+ 
+# # Gráfico comparativo com linhas suavizadas e legendas
+# grafico_comparativo <- ggplot() +
+#   geom_smooth(data = comparativo, aes(x = DATA, y = IFIX, color = "IFIX"), linetype = "solid", size = 1, se=FALSE) +
+#   geom_smooth(data = comparativo, aes(x = DATA, y = SELIC, color = "SELIC"), linetype = "dashed", size = 1, se=FALSE) +
+#   labs(title = "Retornos anuais do IFIX vs Taxa SELIC 2013-2023", x = "Data", y = "Retornos / Taxa % a.a",
+#        color = "") +
+#   scale_y_continuous(labels = scales::percent) +
+#   scale_color_manual(values = c("IFIX" = "black", "SELIC" = "darkgray"),
+#                      labels = c("IFIX", "SELIC")) +
+#   theme_minimal() +
+#   ggeasy::easy_center_title() +
+#   theme(legend.position = "bottom")+
+#   gganimate::transition_states()
+#   
 
 grafico_comparativo
 

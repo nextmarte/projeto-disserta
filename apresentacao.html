@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.326">
 
   <meta name="author" content="Marcus Antonio Cardoso Ramalho">
-  <title>Os fatores que impulsionaram o aumento&nbsp;no número de investidores em fiis na b3</title>
+  <title>Os fatores que impulsionaram o aumento&nbsp;no número de investidores em fiis na B3</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -326,7 +326,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><p>Os fatores que impulsionaram o aumento&nbsp;no número de investidores em fiis na b3</p></h1>
+  <h1 class="title"><p>Os fatores que impulsionaram o aumento&nbsp;no número de investidores em fiis na B3</p></h1>
+  <p class="subtitle">Defesa de projeto de dissertação</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -338,14 +339,39 @@ Marcus Antonio Cardoso Ramalho
 
   <p class="date">26-06-2023</p>
 </section>
-<section id="os-fatores-que-impulsionaram-o-aumento-no-número-de-investidores-em-fiis-na-b3" class="slide level2">
-<h2>Os Fatores que Impulsionaram o Aumento no Número de Investidores em FIIs na B3</h2>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="font-size: 30px">
+<p>Defesa de projeto de dissertação</p>
+<p>Linha de pesquisa:</p>
+<p>Administração Brasileira</p>
+<p>Título:</p>
+<p>Os fatores que impulsionaram o aumento no número de investidores em fiis na B3</p>
+</div><div class="column" style="font-size: 30px">
 <p>Autor: Marcus Antonio Cardoso Ramalho</p>
 <p>Orientador: Prof.&nbsp;Dr.&nbsp;Ariel Levy</p>
+<p>Banca:</p>
+<p>Prof.&nbsp;Dr.&nbsp;Eduardo Camilo Prof.&nbsp;Dr.&nbsp;Claudio Barbedo</p>
+</div>
+</div>
 </section>
-<section id="objetivo" class="slide level2">
-<h2>Objetivo</h2>
-<p>Investigar os fatores que contribuíram para o aumento no número de investidores em Fundos de Investimento Imobiliário (FIIs) na B3.</p>
+<section id="fundos-de-investimento-imobiliário" class="slide level2">
+<h2>Fundos de investimento imobiliário</h2>
+<ul>
+<li><p>Investem no setor imobiliário</p></li>
+<li><p>Investidores podem comprar e vender cotas</p></li>
+<li><p>Alugueis &gt;&gt; Valorização &gt;&gt; Dividendos</p></li>
+<li><p>Tipos:</p>
+<ul>
+<li><p>Fundos de fundos</p></li>
+<li><p>Fundos de Recebíveis - CRI</p></li>
+<li><p>Fundos de tijolo</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="crecimento-do-mercado" class="slide level2">
+<h2>Crecimento do mercado</h2>
 </section>
 <section id="objetivos-específicos" class="slide level2">
 <h2>Objetivos Específicos</h2>
@@ -590,6 +616,44 @@ Marcus Antonio Cardoso Ramalho
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

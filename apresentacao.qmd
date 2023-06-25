@@ -1,7 +1,7 @@
 ---
 title: |
-     Os fatores que impulsionaram o aumento\ no número de investidores em fiis na b3
-
+     Os fatores que impulsionaram o aumento\ no número de investidores em fiis na B3
+subtitle: "Defesa de projeto de dissertação"
 author: "Marcus Antonio Cardoso Ramalho"
 format:
   revealjs: 
@@ -20,54 +20,78 @@ css: style.css
 #| include: false
 #| cache: true
 
-library(gganimate)
-
 source("scripts/graficos-macroeconomicos.R")
-
 
 ```
 
 
-## Os Fatores que Impulsionaram o Aumento no Número de Investidores em FIIs na B3
+## 
 
+::: columns
+::: {.column width="50%" style="font-size: 30px"}
+Defesa de projeto de dissertação
+
+Linha de pesquisa:
+
+Administração Brasileira
+
+Título:
+
+Os fatores que impulsionaram o aumento no número de investidores em fiis na B3
+:::
+
+::: {.column width="50%" style="font-size: 30px"}
 Autor: Marcus Antonio Cardoso Ramalho
 
 Orientador: Prof. Dr. Ariel Levy
 
-## Contexto
+Banca:
 
-```{r}
+Prof. Dr. Eduardo Camilo Prof. Dr. Claudio Barbedo
+:::
+:::
 
-grafico_comparativo
+## Fundos de investimento imobiliário
+
+-   Investem no setor imobiliário
+
+-   Investidores podem comprar e vender cotas
+
+-   Alugueis \>\> Valorização \>\> Dividendos
+
+-   Tipos:
 
 
-  transition_reveal(Data)
 
-gganimate::animate()
-```
+    -   Fundos de fundos
+
+    -   Fundos de Recebíveis - CRI
+
+    -   Fundos de tijolo
 
 
-## Objetivo
 
-Investigar os fatores que contribuíram para o aumento no número de investidores em Fundos de Investimento Imobiliário (FIIs) na B3.
+## Crecimento do mercado
+
+
 
 ## Objetivos Específicos
 
-- Desenvolver uma bibliometria para identificar os trabalhos publicados nos últimos 10 anos e realizar uma revisão da literatura sobre fundos de investimento imobiliário, a fim de compreender as dinâmicas que influenciam a tomada de decisão para o investimento nesse tipo de ativo. 
-- Obter e tratar as séries temporais de dados do número de investidores em fundos de investimento imobiliário, preços e dividendos dos fundos selecionados para a pesquisa, popularidade do mercado de FIIs no Youtube, variação da taxa SELIC e PIB. 
+-   Desenvolver uma bibliometria para identificar os trabalhos publicados nos últimos 10 anos e realizar uma revisão da literatura sobre fundos de investimento imobiliário, a fim de compreender as dinâmicas que influenciam a tomada de decisão para o investimento nesse tipo de ativo.
+-   Obter e tratar as séries temporais de dados do número de investidores em fundos de investimento imobiliário, preços e dividendos dos fundos selecionados para a pesquisa, popularidade do mercado de FIIs no Youtube, variação da taxa SELIC e PIB.
 
 ## Metodologias
 
-- Bibliometria
-- Revisão sistemática da literatura
-- Exploração de dados
+-   Bibliometria
+-   Revisão sistemática da literatura
+-   Exploração de dados
 
 ## Análise de Dados
 
-- Transformação dos dados usando o pacote tidyverse para permitir a visualização e modelagem que serão realizadas posteriormente. 
-- Cálculo de estatísticas e indicadores financeiros usando outros pacotes.
-- Cálculo das estatísticas descritivas das variáveis selecionadas usando R.
-- Preparação dos dados para visualização das estatísticas das séries temporais no período estudado usando o pacote ggplot2. 
+-   Transformação dos dados usando o pacote tidyverse para permitir a visualização e modelagem que serão realizadas posteriormente.
+-   Cálculo de estatísticas e indicadores financeiros usando outros pacotes.
+-   Cálculo das estatísticas descritivas das variáveis selecionadas usando R.
+-   Preparação dos dados para visualização das estatísticas das séries temporais no período estudado usando o pacote ggplot2.
 
 ## Conclusão
 
