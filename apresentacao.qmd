@@ -1,14 +1,74 @@
 ---
 title: |
      Os fatores que impulsionaram o aumento\ no número de investidores em fiis na b3
-subtitle: |
-       Programa de Pós-Graduação em Administração\ 
-       Mestrado Acadêmico em Administração
+
 author: "Marcus Antonio Cardoso Ramalho"
-format: revealjs
+format:
+  revealjs: 
+    theme: serif
 editor: visual
 logo: "https://ppgad.uff.br/wp-content/uploads/sites/96/2022/08/ppgad-logo.jpg"
 date: 06/26/2023
 date-format: "D-MM-YYYY"
+footer: "Mestrado Acadêmico em Administração - UFF"
 css: style.css
 ---
+
+```{r}
+#| echo: false
+#| message: false
+#| include: false
+#| cache: true
+
+library(gganimate)
+
+source("scripts/graficos-macroeconomicos.R")
+
+
+```
+
+
+## Os Fatores que Impulsionaram o Aumento no Número de Investidores em FIIs na B3
+
+Autor: Marcus Antonio Cardoso Ramalho
+
+Orientador: Prof. Dr. Ariel Levy
+
+## Contexto
+
+```{r}
+
+grafico_comparativo
+
+
+  transition_reveal(Data)
+
+gganimate::animate()
+```
+
+
+## Objetivo
+
+Investigar os fatores que contribuíram para o aumento no número de investidores em Fundos de Investimento Imobiliário (FIIs) na B3.
+
+## Objetivos Específicos
+
+- Desenvolver uma bibliometria para identificar os trabalhos publicados nos últimos 10 anos e realizar uma revisão da literatura sobre fundos de investimento imobiliário, a fim de compreender as dinâmicas que influenciam a tomada de decisão para o investimento nesse tipo de ativo. 
+- Obter e tratar as séries temporais de dados do número de investidores em fundos de investimento imobiliário, preços e dividendos dos fundos selecionados para a pesquisa, popularidade do mercado de FIIs no Youtube, variação da taxa SELIC e PIB. 
+
+## Metodologias
+
+- Bibliometria
+- Revisão sistemática da literatura
+- Exploração de dados
+
+## Análise de Dados
+
+- Transformação dos dados usando o pacote tidyverse para permitir a visualização e modelagem que serão realizadas posteriormente. 
+- Cálculo de estatísticas e indicadores financeiros usando outros pacotes.
+- Cálculo das estatísticas descritivas das variáveis selecionadas usando R.
+- Preparação dos dados para visualização das estatísticas das séries temporais no período estudado usando o pacote ggplot2. 
+
+## Conclusão
+
+Este projeto de pesquisa tem como objetivo investigar os fatores que contribuíram para o aumento no número de investidores em FIIs na B3. Para isso, serão utilizadas metodologias como bibliometria, revisão sistemática da literatura e exploração de dados. A análise dos dados será realizada com o uso de pacotes como tidyverse, ggplot2 e outros para cálculo de estatísticas e indicadores financeiros.

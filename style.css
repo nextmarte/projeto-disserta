@@ -3,11 +3,6 @@
   color: black !important;
 }
 
-.quarto-title-author-name {
-  font-size: 100px;
-  color: black !important;
-}
-
 .date {
   font-size: 25px;
   color: black !important;
@@ -17,8 +12,3 @@
   color: black !important;
 }
 
-}
-.subtitle {
-  font-size: 12px;
-  color: red;
-}
