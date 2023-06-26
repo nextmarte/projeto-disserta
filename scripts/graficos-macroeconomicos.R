@@ -5,6 +5,7 @@ library(PerformanceAnalytics)
 library(gtrendsR)
 library(rio)
 library(quantmod)
+library(gganimate)
 
 
 
@@ -27,7 +28,7 @@ anual_selic <- selic %>%
 
 Grafico_selic_anual <- ggplot(anual_selic) +
   aes(x = Data, y = SELIC) +
-  geom_line(colour = "gray", se=FALSE) +
+  geom_line(colour = "gray", se=FALSE, size = 1) +
   labs(
     y = "SELIC % a.a",
     title = "Serie anual da taxa SELIC 2013-2023") +
@@ -45,12 +46,14 @@ investors <- rio::import("dados/investidores_custodia.xlsx")
 
 investidores_custodia <-  ggplot(investors, aes(x = Ano, y = Investidores)) +
   geom_bar(stat = "identity", fill = "gray") +
-  labs(title = "Investidores com posição em custódia 2008-2023",
+  labs(title = "Investidores com posição em custódia 2013-2023",
        x = "Ano",
        y = "Investidores")+
     theme_minimal()+
     ggeasy::easy_adjust_legend(to="center")+
-    ggeasy::easy_center_title()
+    ggeasy::easy_center_title()+
+    xlim(2012, 2023)
+  
 
 
 # Trends busca por FII no youtube -----------------------------------------
@@ -71,7 +74,9 @@ FII_trend_ggplot <-  ggplot(FII_trend_plot, aes(x = year, y = total_hits)) +
        y = "Popularidade")+
   theme_minimal()+
   ggeasy::easy_adjust_legend(to="center")+
-  ggeasy::easy_center_title()
+  ggeasy::easy_center_title()+
+  xlim(2012, 2023)
+
 
 
 # Retornos do IFIX --------------------------------------------------------
@@ -89,7 +94,8 @@ index(ifix_returns) <- as.POSIXct(format(index(ifix_returns), "%Y-%m-%d 00:00:00
 ifix_monthly_returns <- ggplot() +
   geom_line(data = ifix_returns ,
             aes(x = index(ifix_returns), y = ifix_returns),
-            color = "gray") +
+            color = "gray",
+            size = 1) +
   labs(title = "Retornos anuais do IFIX - 2013-2023", x = "Data", y = "Retornos % a.a")+
   scale_y_continuous(labels = scales::percent)+
   theme_minimal()+

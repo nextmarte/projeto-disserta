@@ -5,3 +5,5 @@
 .ini
 /.tmp.driveupload/
 **/desktop.ini
+
+/.quarto/
